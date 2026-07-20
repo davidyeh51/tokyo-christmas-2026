@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>東京聖誕親子行 2026｜12/13-12/18</name>
+  <description>夫妻二人 + 22 個月女兒｜住宿：&amp;Here TOKYO UENO｜依日期分圖層，可直接匯入 Google My Maps</description>
+
+  <Style id="base"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>
+  <Style id="hotel"><IconStyle><color>ff2dc0f2</color><Icon><href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href></Icon></IconStyle></Style>
+  <Style id="food"><IconStyle><color>ff4863e2</color><Icon><href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href></Icon></IconStyle></Style>
+  <Style id="sight"><IconStyle><color>ff708f0f</color><Icon><href>http://maps.google.com/mapfiles/kml/shapes/camera.png</href></Icon></IconStyle></Style>
+  <Style id="market"><IconStyle><color>ff2eabf2</color><Icon><href>http://maps.google.com/mapfiles/kml/shapes/parks.png</href></Icon></IconStyle></Style>
+  <Style id="shop"><IconStyle><color>ff9b30c2</color><Icon><href>http://maps.google.com/mapfiles/kml/shapes/shopping.png</href></Icon></IconStyle></Style>
+  <Style id="transit"><IconStyle><color>ff8f7f17</color><Icon><href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href></Icon></IconStyle></Style>
+
+  <Folder>
+    <name>🏨 基地｜住宿與車站</name>
+    <Placemark><name>&amp;Here TOKYO UENO（住宿）</name><styleUrl>#hotel</styleUrl>
+      <description>京成上野站步行 3 分鐘。公寓式房型，客廳+廚房可加熱副食品。旁有業務超市。</description>
+      <Point><coordinates>139.7745,35.7118,0</coordinates></Point></Placemark>
+    <Placemark><name>京成上野站（Skyliner 終點）</name><styleUrl>#transit</styleUrl>
+      <description>Skyliner 成田直達終點，車站有電梯，步行 3 分鐘到飯店。</description>
+      <Point><coordinates>139.7742,35.7113,0</coordinates></Point></Placemark>
+    <Placemark><name>JR 上野站</name><styleUrl>#transit</styleUrl>
+      <description>JR 山手線／京濱東北線／銀座線／日比谷線樞紐，步行 7 分鐘到飯店。</description>
+      <Point><coordinates>139.7770,35.7138,0</coordinates></Point></Placemark>
+    <Placemark><name>成田機場 第1航廈</name><styleUrl>#transit</styleUrl>
+      <description>12/13 抵達（BR108 11:25）／12/18 出發（BR107 12:25）。Skyliner 約 45 分鐘往返上野。</description>
+      <Point><coordinates>140.3856,35.7653,0</coordinates></Point></Placemark>
+  </Folder>
+
+  <Folder>
+    <name>Day 1｜12/13（日）抵達日</name>
+    <Placemark><name>①  成田 T1 抵達（11:25）</name><styleUrl>#transit</styleUrl>
+      <description>BR108 抵達，入境+領行李約 1 小時，12:45 搭 Skyliner。</description>
+      <Point><coordinates>140.3856,35.7653,0</coordinates></Point></Placemark>
+    <Placemark><name>②  入住 &amp;Here TOKYO UENO（14:00）</name><styleUrl>#hotel</styleUrl>
+      <description>13:45 抵京成上野，步行 3 分鐘。確認嬰兒床已備妥。</description>
+      <Point><coordinates>139.7745,35.7118,0</coordinates></Point></Placemark>
+    <Placemark><name>③  業務超市 上野（15:00-16:30）</name><styleUrl>#shop</styleUrl>
+      <description>副食品、牛奶、水果、隔日早餐採購。飯店旁，路口另有全家、LAWSON。</description>
+      <Point><coordinates>139.7758,35.7100,0</coordinates></Point></Placemark>
+    <Placemark><name>④  上野恩賜公園（17:00 輕散步）</name><styleUrl>#sight</styleUrl>
+      <description>視體力而定，不排正式景點，讓孩子適應環境。</description>
+      <Point><coordinates>139.7743,35.7156,0</coordinates></Point></Placemark>
+    <Placemark><name>⑤ 🍽️ 黑船亭（18:00 晚餐）</name><styleUrl>#food</styleUrl>
+      <description>上野洋食老舖，招牌特製牛肉燴飯、高麗菜捲質地軟嫩適合分食。約 4.2★。建議 17:30 開店即入座。</description>
+      <Point><coordinates>139.7752,35.7106,0</coordinates></Point></Placemark>
+  </Folder>
+
+  <Folder>
+    <name>Day 2｜12/14（一）淺草 × 晴空塔</name>
+    <Placemark><name>①  淺草寺 + 仲見世通（09:00-10:30）</name><styleUrl>#sight</styleUrl>
+      <description>推車 OK，早晨人少，雷門拍全家福。上野搭銀座線 5 分鐘直達。</description>
+      <Point><coordinates>139.7967,35.7148,0</coordinates></Point></Placemark>
+    <Placemark><name>②  墨田水族館（14:00-16:00）</name><styleUrl>#sight</styleUrl>
+      <description>晴空塔 5-6F。推車 OK／哺乳室在 Solamachi 內／室內恆溫。</description>
+      <Point><coordinates>139.8110,35.7100,0</coordinates></Point></Placemark>
+    <Placemark><name>③ 🎄 晴空塔聖誕市集（16:30-18:00）</name><styleUrl>#market</styleUrl>
+      <description>Sky Arena 4F。17:30 塔身聖誕限定點燈。木屋攤位賣熱紅酒、德式香腸。⚠️ 出發前確認 2026 檔期。</description>
+      <Point><coordinates>139.8107,35.7101,0</coordinates></Point></Placemark>
+    <Placemark><name>④ 🍽️ 迴轉壽司トリトン（18:00 晚餐）</name><styleUrl>#food</styleUrl>
+      <description>Solamachi 6F。北海道人氣迴轉壽司約 4.2★，兒童椅 OK。排隊名店，建議 17:30 前取號。</description>
+      <Point><coordinates>139.8107,35.7101,0</coordinates></Point></Placemark>
+  </Folder>
+
+  <Folder>
+    <name>Day 3｜12/15（二）上野 × 神宮外苑</name>
+    <Placemark><name>①  上野動物園（09:30-11:15）</name><styleUrl>#sight</styleUrl>
+      <description>開園即入場看貓熊。推車 OK／哺乳室 OK／幼兒免費。</description>
+      <Point><coordinates>139.7714,35.7166,0</coordinates></Point></Placemark>
+    <Placemark><name>② 🍽️ 敘敘苑 上野不忍口店（11:30-13:00）</name><styleUrl>#food</styleUrl>
+      <description>和牛燒肉商業午餐 3,000 日圓起，約 4.0★。JR 上野站不忍口對面。⚠️ 官網提前 1-3 個月預約，備註兒童椅。</description>
+      <Point><coordinates>139.7745,35.7095,0</coordinates></Point></Placemark>
+    <Placemark><name>③  阿美橫丁（15:00-17:00）</name><styleUrl>#shop</styleUrl>
+      <description>藥妝補貨：松本清、OS Drug。</description>
+      <Point><coordinates>139.7745,35.7085,0</coordinates></Point></Placemark>
+    <Placemark><name>④  ヤマシロヤ 玩具店（15:00-17:00）</name><styleUrl>#shop</styleUrl>
+      <description>五層樓玩具店，上野站對面。</description>
+      <Point><coordinates>139.7766,35.7124,0</coordinates></Point></Placemark>
+    <Placemark><name>⑤ 🎄 東京聖誕市集 in 明治神宮外苑（17:30-19:30）</name><styleUrl>#market</styleUrl>
+      <description>聖德紀念繪畫館前廣場。全東京最大德式市集，14m 聖誕金字塔。⚠️ 需事先購票（2026/11/19 開賣）。信濃町站步行 8 分鐘。</description>
+      <Point><coordinates>139.7175,35.6788,0</coordinates></Point></Placemark>
+    <Placemark><name>　　信濃町站（轉乘點）</name><styleUrl>#transit</styleUrl>
+      <description>上野搭 JR 約 25 分鐘，出站步行 8 分鐘到市集會場。</description>
+      <Point><coordinates>139.7204,35.6805,0</coordinates></Point></Placemark>
+  </Folder>
+
+  <Folder>
+    <name>Day 4｜12/16（三）東京車站 × 丸之內 × 芝公園</name>
+    <Placemark><name>①  KITTE 丸之內（10:00-11:30）</name><styleUrl>#sight</styleUrl>
+      <description>6F 免費展望台看新幹線，室內推車 OK。</description>
+      <Point><coordinates>139.7647,35.6794,0</coordinates></Point></Placemark>
+    <Placemark><name>② 🍽️ 根室花まる KITTE 店（11:30-12:30）</name><styleUrl>#food</styleUrl>
+      <description>北海道根室直送迴轉壽司約 4.1★，兒童椅 OK。人氣店建議 11:15 前取號。</description>
+      <Point><coordinates>139.7647,35.6794,0</coordinates></Point></Placemark>
+    <Placemark><name>③ ☕ Café 1894（14:30-15:45 下午茶）</name><styleUrl>#food</styleUrl>
+      <description>三菱一號館美術館 1F。1894 年銀行營業廳復刻空間，挑高木格天井，經典蘋果派聞名。⚠️ 官網一個月前 00:00 開放訂位，請 11/16 凌晨搶訂。備案：丸之內 HIGASHIYA。</description>
+      <Point><coordinates>139.7635,35.6779,0</coordinates></Point></Placemark>
+    <Placemark><name>④  丸之內仲通燈海（16:00 點燈）</name><styleUrl>#sight</styleUrl>
+      <description>1.2 公里香檳金燈海，推車平坦順暢。順道逛丸大樓、新丸大樓（迪士尼聖誕裝置）。</description>
+      <Point><coordinates>139.7626,35.6800,0</coordinates></Point></Placemark>
+    <Placemark><name>⑤ 🎄 芝公園聖誕市集 + 東京鐵塔（17:30-19:30）</name><styleUrl>#market</styleUrl>
+      <description>12/5 起開放。聖誕金字塔＋東京鐵塔同框的獨家畫面。公園平地推車好走，但空曠風大。日比谷搭都營三田線至御成門站步行 5 分鐘。</description>
+      <Point><coordinates>139.7480,35.6552,0</coordinates></Point></Placemark>
+    <Placemark><name>　　東京鐵塔</name><styleUrl>#sight</styleUrl>
+      <description>芝公園市集的背景地標。</description>
+      <Point><coordinates>139.7454,35.6586,0</coordinates></Point></Placemark>
+    <Placemark><name>　　備案：日比谷 Magic Time 燈飾</name><styleUrl>#sight</styleUrl>
+      <description>若孩子體力不足，改此處：距丸之內步行可達，動線更短。</description>
+      <Point><coordinates>139.7594,35.6741,0</coordinates></Point></Placemark>
+  </Folder>
+
+  <Folder>
+    <name>Day 5｜12/17（四）銀座購物 × 六本木</name>
+    <Placemark><name>①👩 GINZA SIX（媽媽 10:30-12:00）</name><styleUrl>#shop</styleUrl>
+      <description>蔦屋書店、YSL/CELINE 等精品、B2 美妝樓層。6F 餐廳樓層是煉瓦亭的備案（空間大、兒童椅完備）。</description>
+      <Point><coordinates>139.7639,35.6699,0</coordinates></Point></Placemark>
+    <Placemark><name>①👨‍👧 博品館 TOY PARK（爸爸 10:30-12:00）</name><styleUrl>#shop</styleUrl>
+      <description>銀座八丁目，四層樓玩具店。1F 有幼兒可玩的展示玩具，Anpanman／Sylvanian 系列齊全。</description>
+      <Point><coordinates>139.7620,35.6684,0</coordinates></Point></Placemark>
+    <Placemark><name>② 🍽️ 煉瓦亭（12:00-13:30 全家會合午餐）</name><styleUrl>#food</styleUrl>
+      <description>1895 年創業，日本蛋包飯發源店，約 4.0★。蛋包飯質地軟適合幼兒分食。店內空間較窄，推車建議收折。</description>
+      <Point><coordinates>139.7669,35.6725,0</coordinates></Point></Placemark>
+    <Placemark><name>③👩 銀座三越（媽媽 13:30-15:00）</name><styleUrl>#shop</styleUrl>
+      <description>日系服飾、和風伴手禮、地下食品街。</description>
+      <Point><coordinates>139.7671,35.6717,0</coordinates></Point></Placemark>
+    <Placemark><name>③👩 東急プラザ銀座（媽媽 13:30-15:00）</name><styleUrl>#shop</styleUrl>
+      <description>HANDS EXPO 有大量日本設計小物。與三越步行 5 分鐘內。</description>
+      <Point><coordinates>139.7607,35.6725,0</coordinates></Point></Placemark>
+    <Placemark><name>③👨‍👧 教文館ナルニア国（爸爸 14:30-15:30）</name><styleUrl>#shop</styleUrl>
+      <description>6F 兒童繪本專門店，有閱讀角落。環境安靜，孩子鬧脾氣時的避難所。</description>
+      <Point><coordinates>139.7663,35.6733,0</coordinates></Point></Placemark>
+    <Placemark><name>④  UNIQLO TOKYO 銀座（15:30 全家會合）</name><styleUrl>#shop</styleUrl>
+      <description>全球最大 UNIQLO 四層樓。幼兒服飾主採購點（80-110cm）、HEATTECH 童裝。取代原阿卡將行程。</description>
+      <Point><coordinates>139.7654,35.6754,0</coordinates></Point></Placemark>
+    <Placemark><name>④👩 伊東屋 銀座（媽媽 15:00-16:30）</name><styleUrl>#shop</styleUrl>
+      <description>12 層樓文具天堂。手帳、鋼筆、信紙、包裝紙。樓層窄，建議媽媽單獨逛。</description>
+      <Point><coordinates>139.7688,35.6738,0</coordinates></Point></Placemark>
+    <Placemark><name>⑤  欅木坂通 SNOW &amp; BLUE 燈海（17:00-18:00）</name><styleUrl>#sight</styleUrl>
+      <description>80 萬顆藍白 LED 燈海，盡頭正對東京鐵塔。週四人潮比週末少約三成。</description>
+      <Point><coordinates>139.7290,35.6605,0</coordinates></Point></Placemark>
+    <Placemark><name>⑥ 🎄 六本木聖誕市集 大屋根 Plaza（17:30-19:00）</name><styleUrl>#market</styleUrl>
+      <description>精緻歐風市集：手工蠟燭、木製雜貨、聖誕擺飾。聖誕雜貨最後採買點。有頂棚但四面通風。</description>
+      <Point><coordinates>139.7296,35.6604,0</coordinates></Point></Placemark>
+  </Folder>
+
+  <Folder>
+    <name>Day 6｜12/18（五）返程日</name>
+    <Placemark><name>①  退房 &amp;Here TOKYO UENO（08:15）</name><styleUrl>#hotel</styleUrl>
+      <description>前晚打包完成，步行至京成上野站。</description>
+      <Point><coordinates>139.7745,35.7118,0</coordinates></Point></Placemark>
+    <Placemark><name>②  京成上野站 Skyliner（08:40）</name><styleUrl>#transit</styleUrl>
+      <description>約 45 分鐘至成田 T1。建議與去程一起先買電子票。</description>
+      <Point><coordinates>139.7742,35.7113,0</coordinates></Point></Placemark>
+    <Placemark><name>③  成田 T1（09:30 抵達 / 12:25 BR107 起飛）</name><styleUrl>#transit</styleUrl>
+      <description>長榮報到、退稅、免稅店。機上為孩子午睡時段。15:45 抵高雄。</description>
+      <Point><coordinates>140.3856,35.7653,0</coordinates></Point></Placemark>
+  </Folder>
+
+  <Folder>
+    <name>🏥 緊急備援</name>
+    <Placemark><name>東京大學醫學部附屬病院</name><styleUrl>#base</styleUrl>
+      <description>上野周邊大型醫院，計程車 10 分鐘。兒科急診諮詢專線 #8000（小児救急電話相談）。健保海外就醫收據記得保留。</description>
+      <Point><coordinates>139.7627,35.7126,0</coordinates></Point></Placemark>
+  </Folder>
+
+</Document>
+</kml>
