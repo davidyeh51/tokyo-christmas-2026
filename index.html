@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東京聖誕親子行 2026｜12/13–12/18</title>
+<style>
+:root{
+  --paper:#f6f8f7;
+  --ink:#10252c;
+  --muted:#5e6f73;
+  --line:#d8e0dc;
+  --green:#0f8f70;
+  --green-soft:#e6f4ef;
+  --teal:#177f8f;
+  --coral:#e25f48;
+  --coral-soft:#fdeeea;
+  --amber:#f2ab2e;
+  --amber-soft:#fdf3e0;
+  --deep:#0d3b42;
+  --white:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.7;
+}
+a{color:var(--teal);}
+
+/* ===== Header ===== */
+.site-header{
+  background:linear-gradient(135deg,#0d3b42 0%,#0f5648 100%);
+  color:#fff;
+  padding:20px 24px 0;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 2px 12px rgba(13,59,66,.25);
+}
+.header-inner{max-width:1080px;margin:0 auto;}
+.header-top{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px;padding-bottom:10px;}
+.site-title{font-size:1.25rem;font-weight:700;letter-spacing:.02em;}
+.site-title .tree{color:var(--amber);}
+.site-meta{font-size:.8rem;opacity:.85;}
+/* ===== Tabs ===== */
+.tabs{
+  display:flex;
+  gap:2px;
+  overflow-x:auto;
+  scrollbar-width:none;
+  max-width:1080px;
+  margin:0 auto;
+}
+.tabs::-webkit-scrollbar{display:none;}
+.tab{
+  flex:0 0 auto;
+  padding:9px 16px;
+  font-size:.9rem;
+  font-weight:500;
+  color:rgba(255,255,255,.75);
+  background:transparent;
+  border:none;
+  border-radius:10px 10px 0 0;
+  cursor:pointer;
+  white-space:nowrap;
+  font-family:inherit;
+  transition:background .15s,color .15s;
+}
+.tab:hover{background:rgba(255,255,255,.12);color:#fff;}
+.tab.active{background:var(--paper);color:var(--ink);font-weight:700;}
+.tab .sub{display:block;font-size:.68rem;font-weight:400;opacity:.75;line-height:1.2;}
+.tab.active .sub{color:var(--muted);opacity:1;}
+.tab.market-tab{color:#ffd9a8;}
+.tab.market-tab.active{color:var(--coral);}
+
+/* ===== Layout ===== */
+.page{display:none;max-width:1080px;margin:0 auto;padding:32px 24px 72px;}
+.page.active{display:block;animation:fadein .25s ease;}
+@keyframes fadein{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+
+.eyebrow{
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  color:var(--teal);
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+h1.page-title{font-size:1.85rem;font-weight:800;line-height:1.35;margin-bottom:4px;}
+.page-lede{color:var(--muted);font-size:.95rem;margin-bottom:26px;}
+h2.section-title{
+  font-size:1.15rem;font-weight:700;margin:36px 0 14px;
+  padding-left:12px;border-left:4px solid var(--green);
+}
+h2.section-title:first-of-type{margin-top:8px;}
+
+/* ===== Cards & grids ===== */
+.grid{display:grid;gap:14px;}
+.grid.cols-2{grid-template-columns:repeat(2,1fr);}
+.grid.cols-3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:760px){.grid.cols-2,.grid.cols-3{grid-template-columns:1fr;}}
+.card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:18px 20px;
+}
+.card h3{font-size:1rem;font-weight:700;margin-bottom:8px;}
+.card p{font-size:.9rem;color:var(--muted);}
+.card.soft-green{background:linear-gradient(180deg,var(--green-soft),#fff);border-color:#c4e3d8;}
+.card.soft-coral{background:linear-gradient(180deg,var(--coral-soft),#fff);border-color:#f3cfc6;}
+.card.soft-amber{background:linear-gradient(180deg,var(--amber-soft),#fff);border-color:#f0dcb2;}
+
+.big-callout{
+  background:linear-gradient(135deg,var(--deep),#12574b);
+  color:#fff;
+  border-radius:16px;
+  padding:22px 26px;
+  margin:18px 0;
+}
+.big-callout .label{font-size:.78rem;letter-spacing:.12em;opacity:.8;margin-bottom:4px;}
+.big-callout .answer{font-size:1.25rem;font-weight:700;line-height:1.5;}
+.big-callout .answer small{font-size:.85rem;font-weight:400;opacity:.85;display:block;margin-top:6px;}
+
+/* ===== Tables ===== */
+.table-wrap{background:#fff;border:1px solid var(--line);border-radius:14px;overflow-x:auto;margin:12px 0;}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:560px;}
+thead th{
+  background:#f1f5f3;text-align:left;font-weight:700;
+  padding:10px 14px;border-bottom:1px solid var(--line);white-space:nowrap;
+}
+tbody td{padding:10px 14px;border-bottom:1px solid #edf2ef;vertical-align:top;}
+tbody tr:last-child td{border-bottom:none;}
+td.time{white-space:nowrap;font-weight:700;color:var(--teal);font-variant-numeric:tabular-nums;}
+
+/* ===== Map buttons ===== */
+.map-btn{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:.78rem;font-weight:600;
+  color:var(--teal);
+  background:#eaf4f5;
+  border:1px solid #c8e2e5;
+  border-radius:999px;
+  padding:2px 10px;
+  text-decoration:none;
+  white-space:nowrap;
+  transition:background .15s;
+}
+.map-btn:hover{background:#d9edef;}
+.map-btn.route{color:#0f6e54;background:var(--green-soft);border-color:#c4e3d8;}
+.map-btn.route:hover{background:#d8ede4;}
+.map-btn::before{content:"📍";font-size:.8rem;}
+.map-btn.route::before{content:"🚃";}
+.map-btn.walk::before{content:"🚶";}
+
+/* ===== Lists ===== */
+ul.list{list-style:none;margin:8px 0;}
+ul.list li{
+  position:relative;padding-left:22px;margin-bottom:7px;font-size:.92rem;
+}
+ul.list li::before{
+  content:"";position:absolute;left:4px;top:.62em;
+  width:8px;height:8px;border-radius:50%;background:var(--green);
+}
+ul.list.coral li::before{background:var(--coral);}
+ul.list.amber li::before{background:var(--amber);}
+
+.note{
+  background:var(--amber-soft);
+  border-left:4px solid var(--amber);
+  border-radius:0 10px 10px 0;
+  padding:12px 16px;
+  font-size:.88rem;
+  margin:14px 0;
+}
+.note.warn{background:var(--coral-soft);border-left-color:var(--coral);}
+.note.tip{background:var(--green-soft);border-left-color:var(--green);}
+.note b{font-weight:700;}
+
+/* ===== Badges ===== */
+.badge{
+  display:inline-block;font-size:.72rem;font-weight:700;
+  padding:2px 10px;border-radius:999px;margin-left:8px;vertical-align:middle;
+}
+.badge.green{background:var(--green-soft);color:#0c6e56;}
+.badge.amber{background:var(--amber-soft);color:#9a6a0d;}
+.badge.coral{background:var(--coral-soft);color:#b93f2b;}
+
+/* ===== Home day cards ===== */
+.day-card{
+  display:block;
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:16px 18px;cursor:pointer;text-align:left;width:100%;
+  font-family:inherit;color:var(--ink);
+  transition:transform .15s,box-shadow .15s,border-color .15s;
+}
+.day-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(13,59,66,.10);border-color:var(--green);}
+.day-card .d-date{font-size:.78rem;font-weight:700;color:var(--teal);letter-spacing:.06em;}
+.day-card .d-title{font-size:1.02rem;font-weight:700;margin:2px 0 6px;}
+.day-card .d-desc{font-size:.84rem;color:var(--muted);line-height:1.55;}
+.day-card .d-night{margin-top:8px;font-size:.8rem;font-weight:600;color:var(--coral);}
+
+/* ===== Market cards ===== */
+.market-hero{
+  background:linear-gradient(135deg,#5c1f16,#8a3a24);
+  color:#fff;border-radius:16px;padding:24px 28px;margin-bottom:20px;
+}
+.market-hero .label{font-size:.78rem;letter-spacing:.14em;opacity:.85;}
+.market-hero h2{font-size:1.4rem;font-weight:800;margin:4px 0 6px;}
+.market-hero p{font-size:.9rem;opacity:.9;}
+.market-card{
+  background:#fff;border:1px solid var(--line);border-radius:16px;
+  padding:22px 24px;margin-bottom:18px;
+}
+.market-card .m-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:4px;}
+.market-card h3{font-size:1.12rem;font-weight:800;}
+.market-card .m-day{font-size:.8rem;font-weight:700;color:var(--teal);}
+.market-card .m-sub{font-size:.85rem;color:var(--muted);margin-bottom:12px;}
+.m-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px;}
+@media(max-width:700px){.m-cols{grid-template-columns:1fr;}}
+.m-cols h4{font-size:.85rem;font-weight:700;color:var(--green);margin-bottom:6px;}
+.m-cols .caution h4{color:var(--coral);}
+.m-cols ul{list-style:none;}
+.m-cols li{position:relative;padding-left:18px;margin-bottom:6px;font-size:.86rem;}
+.m-cols li::before{content:"";position:absolute;left:2px;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--green);}
+.m-cols .caution li::before{background:var(--coral);}
+
+/* ===== Checklist ===== */
+.check-item{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line);font-size:.92rem;}
+.check-item:last-child{border-bottom:none;}
+.check-item .cb{flex:0 0 auto;margin-top:5px;width:16px;height:16px;border:2px solid var(--green);border-radius:4px;}
+
+/* ===== Footer ===== */
+.site-footer{
+  border-top:1px solid var(--line);
+  padding:20px 24px 40px;text-align:center;
+  font-size:.78rem;color:var(--muted);
+}
+.day-nav{display:flex;justify-content:space-between;margin-top:40px;gap:12px;}
+.day-nav button{
+  font-family:inherit;font-size:.88rem;font-weight:600;
+  background:#fff;border:1px solid var(--line);border-radius:10px;
+  padding:10px 18px;cursor:pointer;color:var(--teal);
+}
+.day-nav button:hover{border-color:var(--green);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-top">
+      <div class="site-title"><span class="tree">🎄</span> 東京聖誕親子行 2026</div>
+      <div class="site-meta">12/13（日）– 12/18（五）｜夫妻二人＋22 個月女兒</div>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button class="tab" data-page="home">總覽<span class="sub">Home</span></button>
+      <button class="tab" data-page="day1">Day 1<span class="sub">12/13 抵達</span></button>
+      <button class="tab" data-page="day2">Day 2<span class="sub">12/14 淺草・晴空塔</span></button>
+      <button class="tab" data-page="day3">Day 3<span class="sub">12/15 上野・外苑</span></button>
+      <button class="tab" data-page="day4">Day 4<span class="sub">12/16 丸之內・芝公園</span></button>
+      <button class="tab" data-page="day5">Day 5<span class="sub">12/17 六本木</span></button>
+      <button class="tab" data-page="day6">Day 6<span class="sub">12/18 返程</span></button>
+      <button class="tab market-tab" data-page="market">🎄 市集攻略<span class="sub">Christmas Markets</span></button>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ 總覽 ============ -->
+<main class="page" id="page-home">
+  <div class="eyebrow">Tokyo Christmas Family Trip</div>
+  <h1 class="page-title">六天五夜：白天親子景點、傍晚聖誕市集，一天一區不趕路</h1>
+  <p class="page-lede">以上野為基地，每天鎖定一個區域；中午回飯店午休配合孩子作息，傍晚再出門看點燈。</p>
+
+  <div class="big-callout">
+    <div class="label">行程主軸</div>
+    <div class="answer">四大聖誕市集 × 四個親子景點，全程電車直達、推車友善
+      <small>晴空塔市集（Day 2）・神宮外苑（Day 3）・芝公園×東京鐵塔（Day 4）・六本木×燈海（Day 5）</small>
+    </div>
+  </div>
+
+  <h2 class="section-title">每日行程速覽（點卡片進入當日詳情）</h2>
+  <div class="grid cols-2">
+    <button class="day-card" data-goto="day1">
+      <div class="d-date">DAY 1｜12/13（日）</div>
+      <div class="d-title">✈️ 抵達日：Skyliner 進市區、超市採購</div>
+      <div class="d-desc">BR108 早班機抵成田，Skyliner 直達京成上野，下午入住採購，不排正式景點。</div>
+      <div class="d-night">晚上：休息，讓孩子適應環境</div>
+    </button>
+    <button class="day-card" data-goto="day2">
+      <div class="d-date">DAY 2｜12/14（一）</div>
+      <div class="d-title">⛩️ 淺草寺 × 墨田水族館</div>
+      <div class="d-desc">早晨人少時逛淺草寺，午休後到晴空塔水族館，室內恆溫適合幼兒。</div>
+      <div class="d-night">🎄 晴空塔聖誕市集＋17:30 塔身點燈</div>
+    </button>
+    <button class="day-card" data-goto="day3">
+      <div class="d-date">DAY 3｜12/15（二）</div>
+      <div class="d-title">🐼 上野動物園 × 敘敘苑 × 阿美橫丁</div>
+      <div class="d-desc">開園即入場看貓熊，中午敘敘苑商業午餐，下午藥妝玩具補貨。</div>
+      <div class="d-night">🎄 神宮外苑東京聖誕市集（需預購門票）</div>
+    </button>
+    <button class="day-card" data-goto="day4">
+      <div class="d-date">DAY 4｜12/16（三）</div>
+      <div class="d-title">🚅 東京車站 KITTE × 丸之內燈海</div>
+      <div class="d-desc">KITTE 免費展望台看新幹線，丸之內室內購物避寒，16:00 仲通點燈。</div>
+      <div class="d-night">🎄 芝公園聖誕市集＋東京鐵塔同框</div>
+    </button>
+    <button class="day-card" data-goto="day5">
+      <div class="d-date">DAY 5｜12/17（四）</div>
+      <div class="d-title">🧸 阿卡將補貨 × 六本木 Hills</div>
+      <div class="d-desc">上午錦糸町阿卡將最後採購，下午六本木 Hills 與毛利庭園。</div>
+      <div class="d-night">🎄 六本木市集＋欅木坂 SNOW &amp; BLUE 燈海</div>
+    </button>
+    <button class="day-card" data-goto="day6">
+      <div class="d-date">DAY 6｜12/18（五）</div>
+      <div class="d-title">✈️ 返程日：08:40 Skyliner 回成田</div>
+      <div class="d-desc">前晚打包完成，09:30 前抵成田 T1，BR107 午班機返高雄。</div>
+      <div class="d-night">機上午睡時段，順勢入睡</div>
+    </button>
+  </div>
+
+  <h2 class="section-title">航班資訊（已確認）</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>航段</th><th>航班</th><th>日期</th><th>時間</th><th>航廈</th></tr></thead>
+    <tbody>
+      <tr><td>高雄 KHH → 東京成田 NRT</td><td><b>BR108</b></td><td>2026/12/13（日）</td><td>07:00 → 11:25</td><td>高雄 I → 成田 T1</td></tr>
+      <tr><td>東京成田 NRT → 高雄 KHH</td><td><b>BR107</b></td><td>2026/12/18（五）</td><td>12:25 → 15:45</td><td>成田 T1 → 高雄 I</td></tr>
+    </tbody>
+  </table></div>
+  <ul class="list">
+    <li>長榮航空已開票，訂位代號 <b>DL6ALB</b>；託運行李每人 2 件</li>
+    <li>出發日 05:00 前抵達機場報到（國際線起飛前 2 小時）</li>
+  </ul>
+  <div class="note warn"><b>✅ 待辦：</b>致電長榮客服申請<b>嬰兒搖籃座位（bassinet）</b>與<b>嬰兒餐</b>（兩段航班都要）——旺季名額有限，越早越好。</div>
+
+  <h2 class="section-title">住宿資訊（已確認）</h2>
+  <div class="card soft-green">
+    <h3>&amp;Here TOKYO UENO
+      <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%26Here%20TOKYO%20UENO">地圖</a>
+    </h3>
+    <ul class="list">
+      <li>京成本線「京成上野站」步行 3 分鐘（＝Skyliner 終點站，下車即達）</li>
+      <li>JR／地鐵「上野站」步行 7 分鐘</li>
+      <li>公寓式房型：客廳＋廚房，可加熱副食品</li>
+      <li>飯店旁有業務超市（便宜採購），路口有全家、LAWSON</li>
+      <li>步行 5 分鐘可達上野松坂屋（觀光客優惠券）</li>
+    </ul>
+    <div class="note warn" style="margin-bottom:0"><b>✅ 待辦：</b>Email 飯店確認<b>嬰兒床（baby cot）</b>，數量有限需提前申請。</div>
+  </div>
+
+  <h2 class="section-title">機場交通</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>路線</th><th>方式</th><th>時間</th><th>導航</th><th>備註</th></tr></thead>
+    <tbody>
+      <tr><td>成田 T1 → 京成上野</td><td>Skyliner</td><td>約 45 分鐘</td>
+        <td><a class="map-btn route" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%88%90%E7%94%B0%E7%A9%BA%E6%B8%AF%E7%AC%AC1%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB&amp;destination=%E4%BA%AC%E6%88%90%E4%B8%8A%E9%87%8E%E9%A7%85&amp;travelmode=transit">路線</a></td>
+        <td>全程對號座，推車可放大件行李區</td></tr>
+      <tr><td>京成上野 → 飯店</td><td>步行</td><td>3 分鐘</td>
+        <td><a class="map-btn route walk" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%BA%AC%E6%88%90%E4%B8%8A%E9%87%8E%E9%A7%85&amp;destination=%26Here%20TOKYO%20UENO&amp;travelmode=walking">步行</a></td>
+        <td>車站有電梯</td></tr>
+    </tbody>
+  </table></div>
+  <ul class="list">
+    <li>Skyliner 車票可提前於 KKday／Klook 購買電子票（較現場便宜）</li>
+    <li>回程 12/18 建議搭 <b>08:40 前後的 Skyliner</b>，09:30 前抵達成田 T1</li>
+  </ul>
+
+  <h2 class="section-title">嬰兒友善餐廳清單</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>餐廳</th><th>位置</th><th>特色</th><th>嬰幼兒設施</th><th>地圖</th></tr></thead>
+    <tbody>
+      <tr><td><b>敘敘苑 上野不忍口店</b></td><td>JR 上野站不忍口對面</td><td>頂級和牛燒肉，平日商業午餐 CP 值高</td><td>兒童椅 ⚠️ 訂位時確認</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8F%99%E3%80%85%E8%8B%91%20%E4%B8%8A%E9%87%8E%E4%B8%8D%E5%BF%8D%E5%8F%A3%E5%BA%97">地圖</a></td></tr>
+      <tr><td>atre 上野餐廳街</td><td>上野站共構</td><td>多間家庭餐廳選擇</td><td>兒童椅 ✓</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%A2%E3%83%88%E3%83%AC%E4%B8%8A%E9%87%8E">地圖</a></td></tr>
+      <tr><td>Solamachi 美食街</td><td>晴空塔</td><td>選擇多元、空間寬敞</td><td>兒童椅 ✓／哺乳室 ✓</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%BA%AC%E3%82%BD%E3%83%A9%E3%83%9E%E3%83%81">地圖</a></td></tr>
+      <tr><td>KITTE 地下美食街</td><td>東京車站旁</td><td>日式洋食均有</td><td>兒童椅 ✓／哺乳室 ✓</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=KITTE%E4%B8%B8%E3%81%AE%E5%86%85">地圖</a></td></tr>
+      <tr><td>大戶屋／ねぎし</td><td>各大車站</td><td>定食類，白飯蒸蛋適合分食</td><td>兒童椅 ✓</td><td>—</td></tr>
+      <tr><td>みはし</td><td>上野</td><td>老舖甜點紅豆餡蜜</td><td>適合午後點心</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%BF%E3%81%AF%E3%81%97%20%E4%B8%8A%E9%87%8E%E6%9C%AC%E5%BA%97">地圖</a></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 class="section-title">購物清單對照</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>需求</th><th>地點</th><th>排入日</th></tr></thead>
+    <tbody>
+      <tr><td>副食品／日常補給</td><td>業務超市（飯店旁）</td><td>Day 1</td></tr>
+      <tr><td>藥妝</td><td>阿美橫丁（松本清、OS Drug）</td><td>Day 3</td></tr>
+      <tr><td>玩具</td><td>ヤマシロヤ（上野站對面）</td><td>Day 3</td></tr>
+      <tr><td>百貨</td><td>松坂屋上野／丸之內</td><td>Day 3 / Day 4</td></tr>
+      <tr><td>嬰幼兒用品</td><td>阿卡將本舖 錦糸町</td><td>Day 5</td></tr>
+      <tr><td>聖誕雜貨伴手禮</td><td>神宮外苑／六本木市集</td><td>Day 3 / Day 5</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 class="section-title">出發前確認清單</h2>
+  <div class="card">
+    <div class="check-item"><div class="cb"></div><div>長榮客服：申請 bassinet 嬰兒搖籃座位＋嬰兒餐（兩段航班都要）</div></div>
+    <div class="check-item"><div class="cb"></div><div>飯店 Email：確認嬰兒床（baby cot）</div></div>
+    <div class="check-item"><div class="cb"></div><div>敘敘苑官網：預約 12/15（二）午餐＋備註兒童椅</div></div>
+    <div class="check-item"><div class="cb"></div><div>神宮外苑東京聖誕市集：官網購買 12/15 入場券（11/19 開賣）</div></div>
+    <div class="check-item"><div class="cb"></div><div>Skyliner：提前購買電子票（去回程）</div></div>
+    <div class="check-item"><div class="cb"></div><div>機場特約停車場：預約 12/13 清晨進場</div></div>
+    <div class="check-item"><div class="cb"></div><div>Visit Japan Web：入境資料預先填寫</div></div>
+    <div class="check-item"><div class="cb"></div><div>旅平險：涵蓋嬰幼兒醫療</div></div>
+    <div class="check-item"><div class="cb"></div><div>確認晴空塔／芝公園／六本木聖誕市集 2026 年實際日期與時間</div></div>
+    <div class="check-item"><div class="cb"></div><div>下載 Uber App 並綁定信用卡（雨天或孩子睡著時備用）</div></div>
+  </div>
+
+  <h2 class="section-title">嬰幼兒裝備清單</h2>
+  <div class="grid cols-3">
+    <div class="card soft-green">
+      <h3>隨身（每日外出）</h3>
+      <ul class="list">
+        <li>輕量推車（附防風雨罩）</li>
+        <li>保溫瓶 × 2（沖奶＋飲水）</li>
+        <li>副食品剪刀、圍兜、濕紙巾</li>
+        <li>尿布 × 6／天、替換衣物一套</li>
+        <li>幼兒外套＋毛帽＋手套（東京 12 月 5–12°C）</li>
+        <li>安撫小物、輕便玩具</li>
+      </ul>
+    </div>
+    <div class="card soft-amber">
+      <h3>行李箱</h3>
+      <ul class="list amber">
+        <li>副食品調理包（頭兩天份，之後現地採購）</li>
+        <li>常備藥：退燒藥、體溫計、生理食鹽水、OK 繃</li>
+        <li>睡袋／熟悉的小被子（幫助認床）</li>
+      </ul>
+    </div>
+    <div class="card soft-coral">
+      <h3>醫療備援</h3>
+      <ul class="list coral">
+        <li>東京都兒科急診諮詢：<b>#8000</b>（小児救急電話相談）</li>
+        <li>上野周邊大型醫院：東京大學醫學部附屬病院（計程車 10 分鐘）
+          <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%BA%AC%E5%A4%A7%E5%AD%A6%E5%8C%BB%E5%AD%A6%E9%83%A8%E9%99%84%E5%B1%9E%E7%97%85%E9%99%A2">地圖</a></li>
+        <li>健保海外就醫收據記得保留，返台可申請核退</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<!-- ============ Day 1 ============ -->
+<main class="page" id="page-day1">
+  <div class="eyebrow">Day 1｜12/13（日）</div>
+  <h1 class="page-title">抵達日：一律輕量，孩子作息穩定是後面五天的基礎</h1>
+  <p class="page-lede">BR108 早班機 → Skyliner 直達京成上野 → 入住、超市採購，不排正式景點。</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>時間</th><th>行程</th><th>說明</th><th>導航</th></tr></thead>
+    <tbody>
+      <tr><td class="time">04:30</td><td><b>住家開車出發</b></td><td>前往機場特約停車場</td><td>—</td></tr>
+      <tr><td class="time">05:00</td><td><b>抵達高雄小港機場</b></td><td>停車場接駁 → 長榮報到櫃檯（航廈 I）</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%AB%98%E9%9B%84%E5%9C%8B%E9%9A%9B%E8%88%AA%E7%A9%BA%E7%AB%99">地圖</a></td></tr>
+      <tr><td class="time">07:00</td><td><b>BR108 起飛</b></td><td>飛行 3 小時 25 分，孩子可在機上補早覺</td><td>—</td></tr>
+      <tr><td class="time">11:25</td><td><b>抵達成田 T1</b></td><td>入境＋領行李約 1 小時</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%88%90%E7%94%B0%E7%A9%BA%E6%B8%AF%E7%AC%AC1%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB">地圖</a></td></tr>
+      <tr><td class="time">12:45</td><td><b>搭乘 Skyliner</b></td><td>成田 T1 → 京成上野，約 45 分鐘</td>
+        <td><a class="map-btn route" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%88%90%E7%94%B0%E7%A9%BA%E6%B8%AF%E7%AC%AC1%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB&amp;destination=%E4%BA%AC%E6%88%90%E4%B8%8A%E9%87%8E%E9%A7%85&amp;travelmode=transit">路線</a></td></tr>
+      <tr><td class="time">13:45</td><td><b>抵達京成上野</b></td><td>步行 3 分鐘至飯店</td>
+        <td><a class="map-btn route walk" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%BA%AC%E6%88%90%E4%B8%8A%E9%87%8E%E9%A7%85&amp;destination=%26Here%20TOKYO%20UENO&amp;travelmode=walking">步行</a></td></tr>
+      <tr><td class="time">14:00</td><td><b>辦理入住</b></td><td>確認嬰兒床已備妥</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%26Here%20TOKYO%20UENO">地圖</a></td></tr>
+      <tr><td class="time">15:00–16:30</td><td><b>業務超市＋便利商店採購</b></td><td>副食品、牛奶、水果、隔日早餐</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A5%AD%E5%8B%99%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%20%E4%B8%8A%E9%87%8E">地圖</a></td></tr>
+      <tr><td class="time">17:00</td><td><b>上野恩賜公園輕散步</b>（視體力）</td><td>不排正式景點，讓孩子適應環境</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E6%81%A9%E8%B3%9C%E5%85%AC%E5%9C%92">地圖</a></td></tr>
+      <tr><td class="time">18:30</td><td><b>晚餐：上野站周邊</b></td><td>建議 atre 上野內家庭餐廳（有兒童椅）</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%A2%E3%83%88%E3%83%AC%E4%B8%8A%E9%87%8E">地圖</a></td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="note tip"><b>💡 原則：</b>抵達日一律輕量，孩子作息穩定是後面五天的基礎。</div>
+</main>
+
+<!-- ============ Day 2 ============ -->
+<main class="page" id="page-day2">
+  <div class="eyebrow">Day 2｜12/14（一）</div>
+  <h1 class="page-title">淺草 × 晴空塔：早晨逛寺、午後水族館、傍晚市集點燈</h1>
+  <p class="page-lede">上野動物園週一休園，故本日安排淺草晴空塔線。全程室內比例高，適合 12 月天氣。</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>時段</th><th>行程</th><th>嬰幼兒指標</th><th>導航</th></tr></thead>
+    <tbody>
+      <tr><td class="time">09:00–10:30</td><td><b>淺草寺＋仲見世通</b></td><td>推車 ✓／早晨人少／雷門拍全家福</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B5%85%E8%8D%89%E5%AF%BA">地圖</a></td></tr>
+      <tr><td class="time">11:00–13:30</td><td><b>午餐＋午休</b></td><td>淺草或回飯店（銀座線直達 5 分鐘）</td><td>—</td></tr>
+      <tr><td class="time">14:00–16:00</td><td><b>墨田水族館</b>（晴空塔 5–6F）</td><td>推車 ✓／哺乳室 ✓（Solamachi 內）／室內恆溫</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%99%E3%81%BF%E3%81%A0%E6%B0%B4%E6%97%8F%E9%A4%A8">地圖</a></td></tr>
+      <tr><td class="time">16:30–18:30</td><td>🎄 <b>晴空塔聖誕市集＋點燈</b></td><td>Sky Arena 4F／17:30 塔身聖誕點燈</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC%E3%82%BF%E3%82%A6%E3%83%B3">地圖</a></td></tr>
+      <tr><td class="time">19:00</td><td><b>晚餐：Solamachi 美食街</b></td><td>兒童椅 ✓／哺乳室 ✓</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%BA%AC%E3%82%BD%E3%83%A9%E3%83%9E%E3%83%81">地圖</a></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 class="section-title">交通路線</h2>
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>上野 → 淺草（東京地鐵銀座線）</h3>
+      <p>銀座線直達約 5 分鐘，淺草站 1 號出口距雷門最近。</p>
+      <p style="margin-top:8px"><a class="map-btn route" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%B8%8A%E9%87%8E%E9%A7%85&amp;destination=%E6%B5%85%E8%8D%89%E9%A7%85&amp;travelmode=transit">上野 → 淺草 電車路線</a></p>
+    </div>
+    <div class="card">
+      <h3>淺草 → 押上／晴空塔</h3>
+      <p>都營淺草線一站直達押上；天氣好也可推車走吾妻橋（約 15–20 分鐘），沿路拍晴空塔。</p>
+      <p style="margin-top:8px">
+        <a class="map-btn route" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%B5%85%E8%8D%89%E9%A7%85&amp;destination=%E6%8A%BC%E4%B8%8A%E9%A7%85&amp;travelmode=transit">電車路線</a>
+        <a class="map-btn route walk" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%B5%85%E8%8D%89%E5%AF%BA&amp;destination=%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC&amp;travelmode=walking">步行（吾妻橋）</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="note warn"><b>⚠️ 出發前確認：</b>2026 晴空塔聖誕市集日期（歷年為 11 月上旬～12/25）。</div>
+  <div class="note tip"><b>💡 帶娃提示：</b>墨田水族館與 Solamachi 同棟，看完水族館直接下樓吃晚餐、逛市集，全程不需再拉車。</div>
+</main>
+
+<!-- ============ Day 3 ============ -->
+<main class="page" id="page-day3">
+  <div class="eyebrow">Day 3｜12/15（二）</div>
+  <h1 class="page-title">上野主場日：動物園看貓熊、敘敘苑午餐、晚上神宮外苑市集</h1>
+  <p class="page-lede">上午行程全部在飯店步行圈內，中午吃完燒肉回飯店午休，傍晚才出遠門。</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>時段</th><th>行程</th><th>嬰幼兒指標</th><th>導航</th></tr></thead>
+    <tbody>
+      <tr><td class="time">09:30–11:15</td><td><b>上野動物園</b>（開園即入場）</td><td>推車 ✓／哺乳室 ✓／幼兒免費／看貓熊趁早</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E5%8B%95%E7%89%A9%E5%9C%92">地圖</a></td></tr>
+      <tr><td class="time">11:30–13:00</td><td>🍽️ <b>敘敘苑 上野不忍口店</b>（商業午餐）</td><td>JR 上野站不忍口對面，動物園步行可達</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%8F%99%E3%80%85%E8%8B%91%20%E4%B8%8A%E9%87%8E%E4%B8%8D%E5%BF%8D%E5%8F%A3%E5%BA%97">地圖</a></td></tr>
+      <tr><td class="time">13:00–14:30</td><td><b>回飯店午休</b></td><td>步行 10 分鐘內</td><td>—</td></tr>
+      <tr><td class="time">15:00–17:00</td><td><b>阿美橫丁＋ヤマシロヤ玩具店</b></td><td>藥妝補貨／五層樓玩具店在上野站對面</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%A2%E3%83%A1%E6%A8%AA%E5%95%86%E5%BA%97%E8%A1%97">阿美橫丁</a>
+            <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%A4%E3%83%9E%E3%82%B7%E3%83%AD%E3%83%A4%20%E4%B8%8A%E9%87%8E">ヤマシロヤ</a></td></tr>
+      <tr><td class="time">17:30–19:30</td><td>🎄 <b>東京聖誕市集（明治神宮外苑）</b></td><td>14 公尺聖誕金字塔／德式木屋市集</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%81%96%E5%BE%B3%E8%A8%98%E5%BF%B5%E7%B5%B5%E7%94%BB%E9%A4%A8">地圖</a></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 class="section-title">交通路線</h2>
+  <div class="card">
+    <h3>上野 → 神宮外苑（JR 山手線／中央・總武線）</h3>
+    <p>上野搭 JR 至信濃町站，車程約 25 分鐘，出站步行 8 分鐘即達市集會場（聖德紀念繪畫館前）。</p>
+    <p style="margin-top:8px">
+      <a class="map-btn route" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%B8%8A%E9%87%8E%E9%A7%85&amp;destination=%E4%BF%A1%E6%BF%83%E7%94%BA%E9%A7%85&amp;travelmode=transit">上野 → 信濃町 電車路線</a>
+      <a class="map-btn route walk" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%BF%A1%E6%BF%83%E7%94%BA%E9%A7%85&amp;destination=%E8%81%96%E5%BE%B3%E8%A8%98%E5%BF%B5%E7%B5%B5%E7%94%BB%E9%A4%A8&amp;travelmode=walking">信濃町站 → 會場 步行</a>
+    </p>
+  </div>
+
+  <div class="note warn"><b>⚠️ 必辦：</b>神宮外苑市集<b>需事先購買入場券</b>（2026 年 11/19 開始，請提前於官網購票）；敘敘苑請提前於官網預約（開放 1–3 個月內訂位），並備註兒童椅需求。</div>
+  <div class="note tip"><b>💡 人潮提示：</b>市集人潮傍晚後漸多，建議 17:30 開門時段入場，20:00 前離場。詳細攻略見「🎄 市集攻略」頁。</div>
+</main>
+
+<!-- ============ Day 4 ============ -->
+<main class="page" id="page-day4">
+  <div class="eyebrow">Day 4｜12/16（三）</div>
+  <h1 class="page-title">東京車站 × 丸之內：室內避寒購物，傍晚芝公園配東京鐵塔</h1>
+  <p class="page-lede">KITTE 免費展望台看新幹線是幼兒殺手鐧；丸之內仲通 16:00 點燈後再往芝公園。</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>時段</th><th>行程</th><th>嬰幼兒指標</th><th>導航</th></tr></thead>
+    <tbody>
+      <tr><td class="time">10:00–11:30</td><td><b>東京車站 KITTE</b></td><td>6F 免費展望台看新幹線／室內推車 ✓</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=KITTE%E4%B8%B8%E3%81%AE%E5%86%85">地圖</a></td></tr>
+      <tr><td class="time">11:30–13:30</td><td><b>午餐＋午休</b></td><td>KITTE／丸之內百貨哺乳室完善</td><td>—</td></tr>
+      <tr><td class="time">14:00–16:00</td><td><b>丸之內購物</b>（丸大樓、新丸大樓）</td><td>迪士尼聖誕主題裝置／室內可避寒</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%B8%E3%81%AE%E5%86%85%E3%83%93%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0">地圖</a></td></tr>
+      <tr><td class="time">16:00–17:00</td><td><b>丸之內仲通燈海</b>（16:00 點燈）</td><td>1.2 公里香檳金燈海／推車平坦順暢</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%B8%E3%81%AE%E5%86%85%E4%BB%B2%E9%80%9A%E3%82%8A">地圖</a></td></tr>
+      <tr><td class="time">17:30–19:30</td><td>🎄 <b>芝公園聖誕市集＋東京鐵塔</b></td><td>12/5 起開放／聖誕金字塔＋鐵塔同框</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%8A%9D%E5%85%AC%E5%9C%92">芝公園</a>
+            <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%BA%AC%E3%82%BF%E3%83%AF%E3%83%BC">東京鐵塔</a></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 class="section-title">交通路線</h2>
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>上野 → 東京車站（JR）</h3>
+      <p>JR 山手線／京濱東北線直達約 8 分鐘。</p>
+      <p style="margin-top:8px"><a class="map-btn route" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%B8%8A%E9%87%8E%E9%A7%85&amp;destination=%E6%9D%B1%E4%BA%AC%E9%A7%85&amp;travelmode=transit">上野 → 東京 電車路線</a></p>
+    </div>
+    <div class="card">
+      <h3>丸之內 → 芝公園（都營三田線）</h3>
+      <p>從日比谷站搭都營三田線至御成門站，出站步行 5 分鐘達芝公園市集。</p>
+      <p style="margin-top:8px">
+        <a class="map-btn route" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%97%A5%E6%AF%94%E8%B0%B7%E9%A7%85&amp;destination=%E5%BE%A1%E6%88%90%E9%96%80%E9%A7%85&amp;travelmode=transit">日比谷 → 御成門 電車路線</a>
+        <a class="map-btn route walk" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%BE%A1%E6%88%90%E9%96%80%E9%A7%85&amp;destination=%E8%8A%9D%E5%85%AC%E5%9C%92&amp;travelmode=walking">御成門站 → 芝公園 步行</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="note tip"><b>💡 備案：</b>若孩子體力不足，芝公園可改為<b>日比谷 Magic Time 燈飾</b>（距丸之內步行可達，動線更短）。
+    <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%A5%E6%AF%94%E8%B0%B7%E3%83%9F%E3%83%83%E3%83%89%E3%82%BF%E3%82%A6%E3%83%B3">日比谷地圖</a></div>
+</main>
+
+<!-- ============ Day 5 ============ -->
+<main class="page" id="page-day5">
+  <div class="eyebrow">Day 5｜12/17（四）</div>
+  <h1 class="page-title">最後採購日：阿卡將補貨、六本木市集與 SNOW &amp; BLUE 燈海收尾</h1>
+  <p class="page-lede">上午錦糸町阿卡將掃貨，午休後前往六本木，17:00 點燈時段看 80 萬顆藍白燈海。</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>時段</th><th>行程</th><th>嬰幼兒指標</th><th>導航</th></tr></thead>
+    <tbody>
+      <tr><td class="time">10:00–11:30</td><td><b>阿卡將本舖 錦糸町店</b>（Olinas）</td><td>嬰幼兒用品最後補貨／哺乳室 ✓</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%A2%E3%82%AB%E3%83%81%E3%83%A3%E3%83%B3%E3%83%9B%E3%83%B3%E3%83%9D%20%E9%8C%A6%E7%B3%B8%E7%94%BA%E5%BA%97">地圖</a></td></tr>
+      <tr><td class="time">11:30–13:30</td><td><b>午餐＋回飯店午休</b></td><td>錦糸町 →（半藏門線/JR）→ 上野</td>
+        <td><a class="map-btn route" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%8C%A6%E7%B3%B8%E7%94%BA%E9%A7%85&amp;destination=%E4%B8%8A%E9%87%8E%E9%A7%85&amp;travelmode=transit">路線</a></td></tr>
+      <tr><td class="time">14:30–16:30</td><td><b>六本木 Hills＋毛利庭園</b></td><td>室內商場推車 ✓／52F 展望台可選</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%85%AD%E6%9C%AC%E6%9C%A8%E3%83%92%E3%83%AB%E3%82%BA">六本木 Hills</a>
+            <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%AF%9B%E5%88%A9%E5%BA%AD%E5%9C%92">毛利庭園</a></td></tr>
+      <tr><td class="time">16:30–18:00</td><td>🎄 <b>六本木聖誕市集</b>（大屋根 Plaza）</td><td>歐風市集／聖誕雜貨最後採買</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%85%AD%E6%9C%AC%E6%9C%A8%E3%83%92%E3%83%AB%E3%82%BA%20%E5%A4%A7%E5%B1%8B%E6%A0%B9%E3%83%97%E3%83%A9%E3%82%B6">地圖</a></td></tr>
+      <tr><td class="time">17:00–18:30</td><td><b>欅木坂通 SNOW &amp; BLUE 燈海</b></td><td>80 萬顆藍白燈＋東京鐵塔背景</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%85%AD%E6%9C%AC%E6%9C%A8%E3%81%91%E3%82%84%E3%81%8D%E5%9D%82%E9%80%9A%E3%82%8A">地圖</a></td></tr>
+      <tr><td class="time">19:00</td><td><b>晚餐後返回飯店</b></td><td>開始整理行李</td><td>—</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 class="section-title">交通路線</h2>
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>上野 → 錦糸町</h3>
+      <p>JR 或地鐵轉乘約 15–20 分鐘；阿卡將位於 Olinas 錦糸町商場內。</p>
+      <p style="margin-top:8px"><a class="map-btn route" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%B8%8A%E9%87%8E%E9%A7%85&amp;destination=%E9%8C%A6%E7%B3%B8%E7%94%BA%E9%A7%85&amp;travelmode=transit">上野 → 錦糸町 電車路線</a></p>
+    </div>
+    <div class="card">
+      <h3>上野 → 六本木（日比谷線直達）</h3>
+      <p>東京地鐵日比谷線直達六本木站，約 30 分鐘不用轉車，推車最省力；或銀座線 → 溜池山王轉南北線 → 六本木一丁目。</p>
+      <p style="margin-top:8px"><a class="map-btn route" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%B8%8A%E9%87%8E%E9%A7%85&amp;destination=%E5%85%AD%E6%9C%AC%E6%9C%A8%E9%A7%85&amp;travelmode=transit">上野 → 六本木 電車路線</a></p>
+    </div>
+  </div>
+
+  <div class="note warn"><b>⚠️ 出發前確認：</b>阿卡將錦糸町店營業資訊。</div>
+  <div class="note tip"><b>💡 人潮提示：</b>週四傍晚燈海人潮比週末少約三成，抓 17:00 點燈時段最佳。</div>
+</main>
+
+<!-- ============ Day 6 ============ -->
+<main class="page" id="page-day6">
+  <div class="eyebrow">Day 6｜12/18（五）</div>
+  <h1 class="page-title">返程日：08:40 Skyliner，機上就是孩子的午睡時段</h1>
+  <p class="page-lede">前晚打包完成，早上只做退房與移動；09:30 前抵成田 T1 從容報到、退稅、逛免稅店。</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>時間</th><th>行程</th><th>說明</th><th>導航</th></tr></thead>
+    <tbody>
+      <tr><td class="time">07:00</td><td><b>起床、早餐、退房準備</b></td><td>前晚先打包完成</td><td>—</td></tr>
+      <tr><td class="time">08:15</td><td><b>退房</b></td><td>步行至京成上野站</td>
+        <td><a class="map-btn route walk" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%26Here%20TOKYO%20UENO&amp;destination=%E4%BA%AC%E6%88%90%E4%B8%8A%E9%87%8E%E9%A7%85&amp;travelmode=walking">步行</a></td></tr>
+      <tr><td class="time">08:40</td><td><b>搭乘 Skyliner</b></td><td>約 45 分鐘</td>
+        <td><a class="map-btn route" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%BA%AC%E6%88%90%E4%B8%8A%E9%87%8E%E9%A7%85&amp;destination=%E6%88%90%E7%94%B0%E7%A9%BA%E6%B8%AF%E7%AC%AC1%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB&amp;travelmode=transit">路線</a></td></tr>
+      <tr><td class="time">09:30</td><td><b>抵達成田 T1</b></td><td>長榮報到、退稅、免稅店</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%88%90%E7%94%B0%E7%A9%BA%E6%B8%AF%E7%AC%AC1%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB">地圖</a></td></tr>
+      <tr><td class="time">12:25</td><td><b>BR107 起飛</b></td><td>機上為孩子的午睡時段，順勢入睡</td><td>—</td></tr>
+      <tr><td class="time">15:45</td><td><b>抵達高雄</b></td><td>領車返家</td><td>—</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="note tip"><b>💡 提醒：</b>Skyliner 回程票建議與去程一起先買好電子票；退稅商品放隨身行李備查。</div>
+</main>
+
+<!-- ============ 市集攻略 ============ -->
+<main class="page" id="page-market">
+  <div class="market-hero">
+    <div class="label">CHRISTMAS MARKET GUIDE</div>
+    <h2>🎄 東京聖誕市集攻略：四晚四市集，帶著推車這樣逛</h2>
+    <p>本行程一晚一市集、由近到遠排序。共通原則：開門時段入場避人潮、20:00 前離場顧作息、熱食熱飲分食取暖。</p>
+  </div>
+
+  <h2 class="section-title">四大市集比較</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>市集</th><th>排入日</th><th>門票</th><th>推車友善度</th><th>一句話特色</th></tr></thead>
+    <tbody>
+      <tr><td><b>晴空塔聖誕市集</b></td><td>Day 2（12/14）</td><td>免費</td><td>★★★★★（商場共構）</td><td>市集＋水族館＋美食街一棟搞定</td></tr>
+      <tr><td><b>神宮外苑東京聖誕市集</b></td><td>Day 3（12/15）</td><td><span class="badge coral">需預購</span></td><td>★★★☆☆（場內人多）</td><td>全東京最正宗德式市集、14m 聖誕金字塔</td></tr>
+      <tr><td><b>芝公園聖誕市集</b></td><td>Day 4（12/16）</td><td>免費（歷年）</td><td>★★★★☆（公園平地）</td><td>聖誕金字塔與東京鐵塔同框的獨家畫面</td></tr>
+      <tr><td><b>六本木聖誕市集</b></td><td>Day 5（12/17）</td><td>免費</td><td>★★★★☆（有電梯動線）</td><td>精緻歐風雜貨＋欅木坂 SNOW &amp; BLUE 燈海</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 class="section-title">各市集詳細攻略</h2>
+
+  <div class="market-card">
+    <div class="m-head">
+      <h3>① 晴空塔聖誕市集（Tokyo Skytree Town）</h3>
+      <div class="m-day">Day 2｜12/14（一）16:30–18:30</div>
+    </div>
+    <div class="m-sub">Sky Arena 4F 廣場＋Solamachi 商場｜歷年 11 月上旬～12/25
+      <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC%E3%82%BF%E3%82%A6%E3%83%B3">地圖</a>
+    </div>
+    <div class="m-cols">
+      <div>
+        <h4>✨ 特色與逛法</h4>
+        <ul>
+          <li>木屋攤位賣熱紅酒、德式香腸、聖誕甜點，背景就是晴空塔</li>
+          <li><b>17:30 塔身聖誕限定點燈</b>——先逛市集、卡好位置等點燈</li>
+          <li>與墨田水族館、Solamachi 同棟，全室內動線接駁，雨天也不怕</li>
+          <li>拍照最佳點：Sky Arena 廣場中央，可同框聖誕樹＋塔身</li>
+        </ul>
+      </div>
+      <div class="caution">
+        <h4>⚠️ 注意事項</h4>
+        <ul>
+          <li>4F 廣場屬戶外，12 月傍晚體感 5°C 上下——孩子帽子手套備齊</li>
+          <li>點燈前 15 分鐘廣場人潮聚集，推車靠邊站定位</li>
+          <li>哺乳室、尿布台在 Solamachi 內（4F/5F），先確認位置再逛</li>
+          <li>2026 年實際檔期出發前於官網確認</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="market-card">
+    <div class="m-head">
+      <h3>② 東京聖誕市集 in 明治神宮外苑</h3>
+      <div class="m-day">Day 3｜12/15（二）17:30–19:30</div>
+    </div>
+    <div class="m-sub">聖德紀念繪畫館前廣場｜<b>需事先購買入場券</b>（2026 年 11/19 開賣）
+      <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%81%96%E5%BE%B3%E8%A8%98%E5%BF%B5%E7%B5%B5%E7%94%BB%E9%A4%A8">地圖</a>
+    </div>
+    <div class="m-cols">
+      <div>
+        <h4>✨ 特色與逛法</h4>
+        <ul>
+          <li>全東京規模最大、最正宗的德式聖誕市集，木屋攤位數十間</li>
+          <li><b>14 公尺高聖誕金字塔（Weihnachtspyramide）</b>是全場地標，必拍</li>
+          <li>德國直送聖誕雜貨：胡桃鉗、薰香木偶、玻璃吊飾——伴手禮首選</li>
+          <li>熱紅酒（大人）＋兒童可喝的熱蘋果汁，附紀念馬克杯</li>
+          <li>17:30 開門時段入場人最少，先拍金字塔再逛攤位</li>
+        </ul>
+      </div>
+      <div class="caution">
+        <h4>⚠️ 注意事項</h4>
+        <ul>
+          <li><b>務必提前線上購票</b>，現場常完售；選平日 17:30 場最穩</li>
+          <li>紀念馬克杯含押金／杯費制，不退杯可帶回收藏</li>
+          <li>場內以碎石與草地為主，推車可行但人多時難推——建議揹巾備援</li>
+          <li>18:30 後人潮明顯變多，帶幼兒 20:00 前離場</li>
+          <li>戶外無暖氣，久站會冷；熱食攤排隊 10–20 分鐘屬正常</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="market-card">
+    <div class="m-head">
+      <h3>③ 芝公園聖誕市集（東京鐵塔旁）</h3>
+      <div class="m-day">Day 4｜12/16（三）17:30–19:30</div>
+    </div>
+    <div class="m-sub">芝公園｜12/5 起開放（歷年免費入場）
+      <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%8A%9D%E5%85%AC%E5%9C%92">地圖</a>
+    </div>
+    <div class="m-cols">
+      <div>
+        <h4>✨ 特色與逛法</h4>
+        <ul>
+          <li>獨家畫面：<b>聖誕金字塔＋點燈的東京鐵塔同框</b>，全東京只有這裡</li>
+          <li>規模比外苑小、步調悠閒，帶幼兒逛起來最輕鬆</li>
+          <li>公園平地推車好走，攤位間距寬</li>
+          <li>拍照最佳點：市集入口往東京鐵塔方向回望</li>
+        </ul>
+      </div>
+      <div class="caution">
+        <h4>⚠️ 注意事項</h4>
+        <ul>
+          <li>公園空曠風大，比市區體感更冷——防風外套必備</li>
+          <li>廁所與尿布台設施較簡單，出發前先在丸之內處理</li>
+          <li>若孩子當天體力不足，改走日比谷 Magic Time 燈飾（動線更短）</li>
+          <li>2026 年實際檔期與是否收費，出發前確認官方公告</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="market-card">
+    <div class="m-head">
+      <h3>④ 六本木 Hills 聖誕市集＋SNOW &amp; BLUE 燈海</h3>
+      <div class="m-day">Day 5｜12/17（四）16:30–18:30</div>
+    </div>
+    <div class="m-sub">大屋根 Plaza（市集）＋欅木坂通（燈海）｜市集免費
+      <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%85%AD%E6%9C%AC%E6%9C%A8%E3%83%92%E3%83%AB%E3%82%BA%20%E5%A4%A7%E5%B1%8B%E6%A0%B9%E3%83%97%E3%83%A9%E3%82%B6">市集地圖</a>
+      <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%85%AD%E6%9C%AC%E6%9C%A8%E3%81%91%E3%82%84%E3%81%8D%E5%9D%82%E9%80%9A%E3%82%8A">欅木坂地圖</a>
+    </div>
+    <div class="m-cols">
+      <div>
+        <h4>✨ 特色與逛法</h4>
+        <ul>
+          <li>走精緻歐風路線：手工蠟燭、木製雜貨、聖誕擺飾，質感最高</li>
+          <li>行程最後一晚——聖誕雜貨伴手禮在這裡做最後採買</li>
+          <li><b>欅木坂通 SNOW &amp; BLUE：80 萬顆藍白 LED 燈海</b>，盡頭正對東京鐵塔</li>
+          <li>逛法：16:30 先逛市集 → 17:00 點燈走欅木坂 → 商場內晚餐</li>
+          <li>週四人潮比週末少約三成，是本週最從容的一晚</li>
+        </ul>
+      </div>
+      <div class="caution">
+        <h4>⚠️ 注意事項</h4>
+        <ul>
+          <li>大屋根 Plaza 有頂棚但四面通風，保暖仍要做足</li>
+          <li>欅木坂人行道拍照人多，推車靠建築側慢行</li>
+          <li>六本木 Hills 內電梯動線稍繞，跟指標走「毛利庭園／欅木坂」出口</li>
+          <li>商場哺乳室完善，逛燈海前先換好尿布</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">帶 22 個月幼兒逛市集：通用守則</h2>
+  <div class="grid cols-3">
+    <div class="card soft-green">
+      <h3>🕐 時間策略</h3>
+      <ul class="list">
+        <li>一律<b>開門時段入場</b>（17:00–17:30），18:30 後人潮倍增</li>
+        <li>停留控制在 1.5–2 小時，20:00 前離場顧作息</li>
+        <li>白天行程留午休，晚上才有電逛市集</li>
+      </ul>
+    </div>
+    <div class="card soft-amber">
+      <h3>🧣 保暖與裝備</h3>
+      <ul class="list amber">
+        <li>市集全在戶外，傍晚體感 3–7°C：洋蔥式穿搭＋毛帽手套</li>
+        <li>推車加防風罩＋小毯子；揹巾備援（人多路段）</li>
+        <li>保溫瓶裝熱水，隨時沖奶或暖手</li>
+      </ul>
+    </div>
+    <div class="card soft-coral">
+      <h3>💴 消費與實務</h3>
+      <ul class="list coral">
+        <li>攤位以<b>現金＋交通 IC 卡</b>最通用，備千圓鈔零錢</li>
+        <li>熱紅酒馬克杯多為押金制，杯子可退可收藏</li>
+        <li>熱食分食：德式香腸、烤馬鈴薯、熱蘋果汁最適合幼兒</li>
+        <li>先確認哺乳室／廁所位置再進場（商場型市集最方便）</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note warn" style="margin-top:20px"><b>⚠️ 共同提醒：</b>四個市集 2026 年實際日期、時間與購票規則，請於出發前 2–4 週再次確認各官方公告（神宮外苑 11/19 開賣入場券務必訂閱提醒）。</div>
+</main>
+
+<footer class="site-footer">
+  🎄 東京聖誕親子行 2026｜12/13–12/18｜行程由親子旅遊顧問規劃<br>
+  資訊時效為 2026 年 7 月，標註 ⚠️ 項目請於出發前 2–4 週再次確認官方公告。
+</footer>
+
+<script>
+(function(){
+  var pages=["home","day1","day2","day3","day4","day5","day6","market"];
+  var tabs=document.querySelectorAll(".tab");
+  function show(id,push){
+    if(pages.indexOf(id)<0)id="home";
+    document.querySelectorAll(".page").forEach(function(p){p.classList.remove("active");});
+    var el=document.getElementById("page-"+id);
+    if(el)el.classList.add("active");
+    tabs.forEach(function(t){t.classList.toggle("active",t.dataset.page===id);});
+    if(push!==false){
+      if(history.pushState)history.pushState(null,"","#"+id);
+      else location.hash=id;
+    }
+    window.scrollTo({top:0});
+    var active=document.querySelector(".tab.active");
+    if(active&&active.scrollIntoView)active.scrollIntoView({block:"nearest",inline:"center",behavior:"smooth"});
+  }
+  tabs.forEach(function(t){t.addEventListener("click",function(){show(t.dataset.page);});});
+  document.querySelectorAll("[data-goto]").forEach(function(b){
+    b.addEventListener("click",function(){show(b.dataset.goto);});
+  });
+  window.addEventListener("popstate",function(){show(location.hash.replace("#","")||"home",false);});
+  show(location.hash.replace("#","")||"home",false);
+})();
+</script>
+</body>
+</html>
