@@ -279,6 +279,90 @@ ul.list.amber li::before{background:var(--amber);}
 .check-item:last-child{border-bottom:none;}
 .check-item .cb{flex:0 0 auto;margin-top:5px;width:16px;height:16px;border:2px solid var(--green);border-radius:4px;}
 
+/* ===== Day timeline ===== */
+.timeline{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px 14px;margin:14px 0;}
+.tl-cap{font-size:.8rem;font-weight:700;color:var(--muted);margin-bottom:10px;}
+.tl-track{position:relative;height:40px;background:#f1f5f3;border-radius:8px;}
+.tl-block{
+  position:absolute;top:0;height:40px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.72rem;font-weight:700;color:#fff;
+  overflow:hidden;white-space:nowrap;padding:0 3px;
+}
+.tl-axis{position:relative;height:18px;margin-top:4px;}
+.tl-tick{position:absolute;font-size:.68rem;color:var(--muted);transform:translateX(-50%);font-variant-numeric:tabular-nums;}
+.tl-legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;}
+.tl-legend span{font-size:.72rem;display:inline-flex;align-items:center;gap:5px;color:var(--muted);}
+.tl-legend i{width:11px;height:11px;border-radius:3px;display:inline-block;}
+@media(max-width:640px){
+  .tl-block{font-size:.6rem;}
+  .tl-tick{font-size:.6rem;}
+}
+
+/* ===== Route chain ===== */
+.route-chain{
+  display:flex;align-items:flex-start;flex-wrap:nowrap;overflow-x:auto;
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:18px 18px 14px;margin:14px 0;
+}
+.route-chain::-webkit-scrollbar{height:6px;}
+.route-chain::-webkit-scrollbar-thumb{background:#d8e0dc;border-radius:3px;}
+.rc-node{display:flex;flex-direction:column;align-items:center;flex:0 0 auto;width:72px;text-align:center;}
+.rc-dot{width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--deep);margin:4px 0 7px;}
+.rc-dot.hl{background:var(--coral);border-color:var(--coral);}
+.rc-name{font-size:.8rem;font-weight:700;line-height:1.3;}
+.rc-time{font-size:.68rem;color:var(--muted);font-variant-numeric:tabular-nums;}
+.rc-link{flex:1 1 auto;min-width:78px;display:flex;flex-direction:column;align-items:center;padding-top:11px;}
+.rc-bar{height:7px;width:100%;border-radius:4px;margin-bottom:6px;}
+.rc-line{font-size:.7rem;font-weight:700;white-space:nowrap;}
+.rc-dur{font-size:.66rem;color:var(--muted);white-space:nowrap;}
+
+/* ===== Market timing chart ===== */
+.mkt-chart{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px 14px;margin:14px 0;}
+.mkt-row{display:grid;grid-template-columns:140px 1fr;gap:12px;align-items:center;margin-bottom:9px;}
+.mkt-label{font-size:.8rem;font-weight:700;text-align:right;line-height:1.3;}
+.mkt-label small{display:block;font-size:.68rem;font-weight:400;color:var(--muted);}
+.mkt-track{position:relative;height:32px;background:#f1f5f3;border-radius:6px;}
+.mkt-bar{
+  position:absolute;top:0;height:32px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.72rem;font-weight:700;color:#fff;white-space:nowrap;
+}
+.mkt-pin{position:absolute;top:-4px;height:40px;width:2px;background:var(--coral);}
+.mkt-pin::after{
+  content:attr(data-label);position:absolute;top:-16px;left:50%;transform:translateX(-50%);
+  font-size:.66rem;font-weight:700;color:var(--coral);white-space:nowrap;
+}
+.mkt-axis{display:grid;grid-template-columns:140px 1fr;gap:12px;margin-top:2px;}
+.mkt-axis .ax{position:relative;height:18px;}
+.mkt-axis .ax span{position:absolute;font-size:.68rem;color:var(--muted);transform:translateX(-50%);font-variant-numeric:tabular-nums;}
+@media(max-width:640px){
+  .mkt-row,.mkt-axis{grid-template-columns:88px 1fr;gap:8px;}
+  .mkt-label{font-size:.72rem;}
+  .mkt-bar{font-size:.62rem;}
+}
+
+/* ===== SVG map ===== */
+.map-figure{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0;}
+.map-figure svg{width:100%;height:auto;display:block;}
+.map-figure figcaption{font-size:.78rem;color:var(--muted);margin-top:10px;text-align:center;}
+
+/* ===== Metrics ===== */
+.metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0;}
+@media(max-width:760px){.metric-row{grid-template-columns:repeat(2,1fr);}}
+.metric{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;}
+.metric .m-label{font-size:.72rem;color:var(--muted);font-weight:600;}
+.metric .m-value{font-size:1.5rem;font-weight:800;line-height:1.2;margin:2px 0;}
+.metric .m-note{font-size:.72rem;color:var(--muted);}
+.metric.green{background:linear-gradient(180deg,var(--green-soft),#fff);border-color:#c4e3d8;}
+.metric.green .m-value{color:#0c6e56;}
+.metric.amber{background:linear-gradient(180deg,var(--amber-soft),#fff);border-color:#f0dcb2;}
+.metric.amber .m-value{color:#9a6a0d;}
+.metric.coral{background:linear-gradient(180deg,var(--coral-soft),#fff);border-color:#f3cfc6;}
+.metric.coral .m-value{color:#b93f2b;}
+.metric.teal{background:linear-gradient(180deg,#e7f2f4,#fff);border-color:#c8e2e5;}
+.metric.teal .m-value{color:#136976;}
+
 /* ===== Footer ===== */
 .site-footer{
   border-top:1px solid var(--line);
@@ -331,6 +415,99 @@ ul.list.amber li::before{background:var(--amber);}
   </div>
 
   <div class="note tip"><b>📌 v2 更新重點：</b>每日餐廳全部指定（黑船亭、トリトン、敘敘苑、根室花まる、Café 1894、煉瓦亭）；Day 5 由「阿卡將＋六本木 Hills」改為<b>銀座媽媽購物日</b>（爸爸帶女兒走博品館／繪本店平行路線），幼兒用品改在 UNIQLO 銀座旗艦店採購。</div>
+
+  <div class="metric-row">
+    <div class="metric teal"><div class="m-label">行程天數</div><div class="m-value">6 天</div><div class="m-note">5 晚，住宿不換點</div></div>
+    <div class="metric green"><div class="m-label">主要景點</div><div class="m-value">8 處</div><div class="m-note">室內景點佔一半</div></div>
+    <div class="metric amber"><div class="m-label">聖誕市集</div><div class="m-value">4 場</div><div class="m-note">一晚一場不重疊</div></div>
+    <div class="metric coral"><div class="m-label">單趟車程</div><div class="m-value">≤ 30 分</div><div class="m-note">全部從上野出發</div></div>
+  </div>
+
+  <h2 class="section-title">全行程移動地圖：上野為中心，四個方向各去一天</h2>
+  <figure class="map-figure">
+    <svg viewBox="0 0 820 610" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="東京行程移動地圖，以上野為中心連往淺草晴空塔、神宮外苑、東京車站芝公園、銀座六本木">
+      <rect x="0" y="0" width="820" height="610" fill="#f8faf9"/>
+      <path d="M820,430 C740,470 700,540 690,610 L820,610 Z" fill="#dcecf2"/>
+      <path d="M612,52 C640,120 650,200 628,285 C610,360 590,440 574,530" stroke="#c3dfe8" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <text x="646" y="230" font-size="11" fill="#8aa8b2" font-family="sans-serif">隅田川</text>
+      <text x="742" y="560" font-size="11" fill="#8aa8b2" font-family="sans-serif">東京灣</text>
+      <ellipse cx="355" cy="323" rx="50" ry="35" fill="#e4eee6" stroke="#cadfd0" stroke-width="1.5"/>
+      <text x="355" y="328" font-size="12" fill="#7d9384" text-anchor="middle" font-family="sans-serif">皇居</text>
+
+      <g stroke-width="2" fill="none" stroke-dasharray="7 5">
+        <path d="M485,110 Q556,86 627,99" stroke="#177f8f"/>
+        <path d="M627,99 Q676,105 713,135" stroke="#177f8f"/>
+        <path d="M485,110 Q290,160 146,366" stroke="#0f8f70"/>
+        <path d="M485,110 Q448,235 422,366" stroke="#c07d16"/>
+        <path d="M422,366 Q382,450 318,537" stroke="#c07d16"/>
+        <path d="M485,110 Q510,270 443,419" stroke="#e25f48"/>
+        <path d="M443,419 Q330,445 212,511" stroke="#e25f48"/>
+        <path d="M485,102 Q540,58 592,36" stroke="#93a5a9"/>
+      </g>
+
+      <text x="556" y="76" font-size="11" fill="#177f8f" text-anchor="middle" font-family="sans-serif">銀座線 5分</text>
+      <text x="700" y="88" font-size="11" fill="#177f8f" text-anchor="middle" font-family="sans-serif">1站</text>
+      <text x="286" y="196" font-size="11" fill="#0f8f70" text-anchor="middle" font-family="sans-serif">JR 25分</text>
+      <text x="470" y="246" font-size="11" fill="#c07d16" text-anchor="start" font-family="sans-serif">JR 8分</text>
+      <text x="352" y="452" font-size="11" fill="#c07d16" text-anchor="middle" font-family="sans-serif">三田線</text>
+      <text x="516" y="278" font-size="11" fill="#e25f48" text-anchor="start" font-family="sans-serif">銀座線 15分</text>
+      <text x="330" y="440" font-size="11" fill="#e25f48" text-anchor="middle" font-family="sans-serif">日比谷線 10分</text>
+
+      <rect x="592" y="12" width="216" height="34" rx="9" fill="#eef2f1" stroke="#d3dcd8"/>
+      <text x="700" y="34" font-size="12.5" fill="#5e6f73" text-anchor="middle" font-family="sans-serif">✈ 成田 T1 ⇄ Skyliner 45 分</text>
+
+      <g font-family="sans-serif">
+        <circle cx="485" cy="110" r="13" fill="#0d3b42"/>
+        <circle cx="485" cy="110" r="5" fill="#fff"/>
+        <text x="485" y="84" font-size="15" font-weight="700" fill="#10252c" text-anchor="middle">上野（基地）</text>
+        <text x="485" y="139" font-size="11.5" fill="#5e6f73" text-anchor="middle">飯店・動物園・阿美橫丁</text>
+
+        <circle cx="627" cy="99" r="9" fill="#fff" stroke="#177f8f" stroke-width="3.5"/>
+        <text x="627" y="74" font-size="14" font-weight="700" fill="#10252c" text-anchor="middle">淺草</text>
+
+        <circle cx="713" cy="135" r="9" fill="#fff" stroke="#177f8f" stroke-width="3.5"/>
+        <text x="713" y="162" font-size="14" font-weight="700" fill="#10252c" text-anchor="middle">晴空塔・押上</text>
+        <text x="713" y="178" font-size="11.5" fill="#177f8f" text-anchor="middle">Day 2 🎄</text>
+
+        <circle cx="146" cy="366" r="9" fill="#fff" stroke="#0f8f70" stroke-width="3.5"/>
+        <text x="146" y="393" font-size="14" font-weight="700" fill="#10252c" text-anchor="middle">神宮外苑</text>
+        <text x="146" y="409" font-size="11.5" fill="#0f8f70" text-anchor="middle">Day 3 🎄</text>
+
+        <circle cx="422" cy="366" r="9" fill="#fff" stroke="#c07d16" stroke-width="3.5"/>
+        <text x="422" y="341" font-size="14" font-weight="700" fill="#10252c" text-anchor="middle">東京車站・丸之內</text>
+
+        <circle cx="318" cy="537" r="9" fill="#fff" stroke="#c07d16" stroke-width="3.5"/>
+        <text x="318" y="564" font-size="14" font-weight="700" fill="#10252c" text-anchor="middle">芝公園・東京鐵塔</text>
+        <text x="318" y="580" font-size="11.5" fill="#c07d16" text-anchor="middle">Day 4 🎄</text>
+
+        <circle cx="443" cy="419" r="9" fill="#fff" stroke="#e25f48" stroke-width="3.5"/>
+        <text x="459" y="416" font-size="14" font-weight="700" fill="#10252c" text-anchor="start">銀座</text>
+        <text x="459" y="432" font-size="11.5" fill="#e25f48" text-anchor="start">Day 5 🛍️</text>
+
+        <circle cx="212" cy="511" r="9" fill="#fff" stroke="#e25f48" stroke-width="3.5"/>
+        <text x="196" y="508" font-size="14" font-weight="700" fill="#10252c" text-anchor="end">六本木</text>
+        <text x="196" y="524" font-size="11.5" fill="#e25f48" text-anchor="end">Day 5 🎄</text>
+      </g>
+
+      <g font-family="sans-serif">
+        <line x1="52" y1="576" x2="189" y2="576" stroke="#5e6f73" stroke-width="2"/>
+        <line x1="52" y1="571" x2="52" y2="581" stroke="#5e6f73" stroke-width="2"/>
+        <line x1="189" y1="571" x2="189" y2="581" stroke="#5e6f73" stroke-width="2"/>
+        <text x="120" y="594" font-size="11.5" fill="#5e6f73" text-anchor="middle">2 公里</text>
+        <path d="M44,26 L44,54 M44,26 L38,36 M44,26 L50,36" stroke="#5e6f73" stroke-width="2" fill="none"/>
+        <text x="60" y="36" font-size="12" fill="#5e6f73">N</text>
+      </g>
+    </svg>
+    <figcaption>依實際經緯度等比繪製（1 公分約 1.5 公里），車程為概略值。點下方各日卡片看當日詳細動線。</figcaption>
+  </figure>
+
+  <div class="day-legend">
+    <span><i style="background:#0d3b42"></i>上野基地</span>
+    <span><i style="background:#177f8f"></i>Day 2 淺草・晴空塔</span>
+    <span><i style="background:#0f8f70"></i>Day 3 神宮外苑</span>
+    <span><i style="background:#c07d16"></i>Day 4 丸之內・芝公園</span>
+    <span><i style="background:#e25f48"></i>Day 5 銀座・六本木</span>
+  </div>
 
   <h2 class="section-title">每日行程速覽（點卡片進入當日詳情）</h2>
   <div class="grid cols-2">
@@ -525,6 +702,48 @@ ul.list.amber li::before{background:var(--amber);}
   <h1 class="page-title">抵達日：一律輕量，孩子作息穩定是後面五天的基礎</h1>
   <p class="page-lede">BR108 早班機 → Skyliner 直達京成上野 → 入住、超市採購，不排正式景點。</p>
 
+  <div class="timeline">
+    <div class="tl-cap">📊 當日時間分配</div>
+    <div class="tl-track">
+      <div class="tl-block" style="left:3.13%;width:15.63%;background:#177f8f">出發·報到</div>
+      <div class="tl-block" style="left:18.75%;width:27.60%;background:#0d3b42">✈ BR108 飛行</div>
+      <div class="tl-block" style="left:46.35%;width:8.33%;background:#93a5a9">入境</div>
+      <div class="tl-block" style="left:54.69%;width:6.25%;background:#177f8f">Skyliner</div>
+      <div class="tl-block" style="left:62.5%;width:6.25%;background:#93a5a9">入住</div>
+      <div class="tl-block" style="left:68.75%;width:9.38%;background:#a03156">採購</div>
+      <div class="tl-block" style="left:81.25%;width:6.25%;background:#0f8f70">公園</div>
+      <div class="tl-block" style="left:87.5%;width:9.38%;background:#e25f48">晚餐</div>
+    </div>
+    <div class="tl-axis">
+      <span class="tl-tick" style="left:0%">04:00</span>
+      <span class="tl-tick" style="left:25%">08:00</span>
+      <span class="tl-tick" style="left:50%">12:00</span>
+      <span class="tl-tick" style="left:75%">16:00</span>
+      <span class="tl-tick" style="left:100%">20:00</span>
+    </div>
+    <div class="tl-legend">
+      <span><i style="background:#0d3b42"></i>飛行</span>
+      <span><i style="background:#177f8f"></i>移動</span>
+      <span><i style="background:#93a5a9"></i>休息·手續</span>
+      <span><i style="background:#a03156"></i>採購</span>
+      <span><i style="background:#0f8f70"></i>景點</span>
+      <span><i style="background:#e25f48"></i>餐飲</span>
+    </div>
+  </div>
+
+  <h2 class="section-title">移動路線：從高雄到飯店，只換兩次交通工具</h2>
+  <div class="route-chain">
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">高雄<br>小港</div><div class="rc-time">07:00</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#0d3b42"></div><div class="rc-line" style="color:#0d3b42">✈ BR108</div><div class="rc-dur">3小時25分</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">成田<br>T1</div><div class="rc-time">11:25</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#93a5a9"></div><div class="rc-line" style="color:#5e6f73">入境·領行李</div><div class="rc-dur">約 1 小時</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">Skyliner<br>月台</div><div class="rc-time">12:45</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#1d2088"></div><div class="rc-line" style="color:#1d2088">京成 Skyliner</div><div class="rc-dur">45 分・對號座</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">京成<br>上野</div><div class="rc-time">13:45</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#93a5a9"></div><div class="rc-line" style="color:#5e6f73">🚶 步行</div><div class="rc-dur">3 分・有電梯</div></div>
+    <div class="rc-node"><div class="rc-dot hl"></div><div class="rc-name">飯店</div><div class="rc-time">14:00</div></div>
+  </div>
+
   <div class="table-wrap"><table>
     <thead><tr><th>時間</th><th>行程</th><th>說明</th><th>導航</th></tr></thead>
     <tbody>
@@ -567,6 +786,41 @@ ul.list.amber li::before{background:var(--amber);}
   <div class="eyebrow">Day 2｜12/14（一）</div>
   <h1 class="page-title">淺草 × 晴空塔：早晨逛寺、午後水族館、傍晚市集點燈</h1>
   <p class="page-lede">上野動物園週一休園，故本日安排淺草晴空塔線。全程室內比例高，適合 12 月天氣。</p>
+
+  <div class="timeline">
+    <div class="tl-cap">📊 當日時間分配　·　下午到晚上全在晴空塔同一棟</div>
+    <div class="tl-track">
+      <div class="tl-block" style="left:8.33%;width:12.5%;background:#0f8f70">淺草寺</div>
+      <div class="tl-block" style="left:25%;width:20.83%;background:#93a5a9">午餐 · 午休</div>
+      <div class="tl-block" style="left:50%;width:16.67%;background:#0f8f70">墨田水族館</div>
+      <div class="tl-block" style="left:70.83%;width:12.5%;background:#c07d16">🎄 市集</div>
+      <div class="tl-block" style="left:83.33%;width:12.5%;background:#e25f48">トリトン</div>
+    </div>
+    <div class="tl-axis">
+      <span class="tl-tick" style="left:0%">08:00</span>
+      <span class="tl-tick" style="left:25%">11:00</span>
+      <span class="tl-tick" style="left:50%">14:00</span>
+      <span class="tl-tick" style="left:75%">17:00</span>
+      <span class="tl-tick" style="left:100%">20:00</span>
+    </div>
+    <div class="tl-legend">
+      <span><i style="background:#0f8f70"></i>景點</span>
+      <span><i style="background:#93a5a9"></i>休息</span>
+      <span><i style="background:#c07d16"></i>市集·點燈</span>
+      <span><i style="background:#e25f48"></i>餐飲</span>
+    </div>
+  </div>
+
+  <h2 class="section-title">移動路線：兩段短程，都是一站到底</h2>
+  <div class="route-chain">
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">上野</div><div class="rc-time">08:45</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#ff9500"></div><div class="rc-line" style="color:#d97f00">銀座線</div><div class="rc-dur">5 分・直達</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">淺草</div><div class="rc-time">09:00</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#e85298"></div><div class="rc-line" style="color:#d13f82">都營淺草線</div><div class="rc-dur">1 站｜或步行 15 分</div></div>
+    <div class="rc-node"><div class="rc-dot hl"></div><div class="rc-name">押上<br>晴空塔</div><div class="rc-time">14:00</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#93a5a9"></div><div class="rc-line" style="color:#5e6f73">同棟垂直移動</div><div class="rc-dur">水族館→市集→晚餐</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">返回<br>上野</div><div class="rc-time">19:30</div></div>
+  </div>
 
   <div class="table-wrap"><table>
     <thead><tr><th>時段</th><th>行程</th><th>嬰幼兒指標</th><th>導航</th></tr></thead>
@@ -619,6 +873,42 @@ ul.list.amber li::before{background:var(--amber);}
   <h1 class="page-title">上野主場日：動物園看貓熊、敘敘苑午餐、晚上神宮外苑市集</h1>
   <p class="page-lede">上午行程全部在飯店步行圈內，中午吃完燒肉回飯店午休，傍晚才出遠門。</p>
 
+  <div class="timeline">
+    <div class="tl-cap">📊 當日時間分配　·　17:00 前都在上野步行圈</div>
+    <div class="tl-track">
+      <div class="tl-block" style="left:12.5%;width:14.58%;background:#0f8f70">上野動物園</div>
+      <div class="tl-block" style="left:29.17%;width:12.5%;background:#e25f48">敘敘苑</div>
+      <div class="tl-block" style="left:41.67%;width:12.5%;background:#93a5a9">午休</div>
+      <div class="tl-block" style="left:58.33%;width:16.67%;background:#a03156">阿美橫丁·玩具</div>
+      <div class="tl-block" style="left:79.17%;width:16.67%;background:#c07d16">🎄 神宮外苑</div>
+    </div>
+    <div class="tl-axis">
+      <span class="tl-tick" style="left:0%">08:00</span>
+      <span class="tl-tick" style="left:25%">11:00</span>
+      <span class="tl-tick" style="left:50%">14:00</span>
+      <span class="tl-tick" style="left:75%">17:00</span>
+      <span class="tl-tick" style="left:100%">20:00</span>
+    </div>
+    <div class="tl-legend">
+      <span><i style="background:#0f8f70"></i>景點</span>
+      <span><i style="background:#e25f48"></i>餐飲</span>
+      <span><i style="background:#93a5a9"></i>休息</span>
+      <span><i style="background:#a03156"></i>購物</span>
+      <span><i style="background:#c07d16"></i>市集</span>
+    </div>
+  </div>
+
+  <h2 class="section-title">移動路線：白天零電車，傍晚才出一趟遠門</h2>
+  <div class="route-chain">
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">飯店</div><div class="rc-time">09:15</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#93a5a9"></div><div class="rc-line" style="color:#5e6f73">🚶 步行圈</div><div class="rc-dur">動物園·敘敘苑·阿美橫丁</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">上野站</div><div class="rc-time">17:00</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#9acd32"></div><div class="rc-line" style="color:#6f9a17">JR 山手線·總武線</div><div class="rc-dur">約 25 分</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">信濃町</div><div class="rc-time">17:25</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#93a5a9"></div><div class="rc-line" style="color:#5e6f73">🚶 步行</div><div class="rc-dur">8 分</div></div>
+    <div class="rc-node"><div class="rc-dot hl"></div><div class="rc-name">神宮外苑<br>市集</div><div class="rc-time">17:30</div></div>
+  </div>
+
   <div class="table-wrap"><table>
     <thead><tr><th>時段</th><th>行程</th><th>嬰幼兒指標</th><th>導航</th></tr></thead>
     <tbody>
@@ -663,6 +953,44 @@ ul.list.amber li::before{background:var(--amber);}
   <div class="eyebrow">Day 4｜12/16（三）</div>
   <h1 class="page-title">東京車站 × Café 1894 × 丸之內：室內避寒，傍晚芝公園配東京鐵塔</h1>
   <p class="page-lede">KITTE 免費展望台看新幹線是幼兒殺手鐧；下午在 1894 年銀行營業廳復刻空間喝下午茶，16:00 仲通點燈後再往芝公園。</p>
+
+  <div class="timeline">
+    <div class="tl-cap">📊 當日時間分配　·　17:30 前全部在丸之內室內步行圈</div>
+    <div class="tl-track">
+      <div class="tl-block" style="left:16.67%;width:12.5%;background:#0f8f70">KITTE</div>
+      <div class="tl-block" style="left:29.17%;width:8.33%;background:#e25f48">花まる</div>
+      <div class="tl-block" style="left:37.5%;width:12.5%;background:#93a5a9">午休</div>
+      <div class="tl-block" style="left:54.17%;width:10.42%;background:#e25f48">Café 1894</div>
+      <div class="tl-block" style="left:66.67%;width:8.33%;background:#0f8f70">燈海</div>
+      <div class="tl-block" style="left:79.17%;width:16.67%;background:#c07d16">🎄 芝公園</div>
+    </div>
+    <div class="tl-axis">
+      <span class="tl-tick" style="left:0%">08:00</span>
+      <span class="tl-tick" style="left:25%">11:00</span>
+      <span class="tl-tick" style="left:50%">14:00</span>
+      <span class="tl-tick" style="left:75%">17:00</span>
+      <span class="tl-tick" style="left:100%">20:00</span>
+    </div>
+    <div class="tl-legend">
+      <span><i style="background:#0f8f70"></i>景點·燈飾</span>
+      <span><i style="background:#e25f48"></i>餐飲</span>
+      <span><i style="background:#93a5a9"></i>休息</span>
+      <span><i style="background:#c07d16"></i>市集</span>
+    </div>
+  </div>
+
+  <h2 class="section-title">移動路線：丸之內內部全靠步行，只有最後一段換線</h2>
+  <div class="route-chain">
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">上野</div><div class="rc-time">09:45</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#9acd32"></div><div class="rc-line" style="color:#6f9a17">JR 山手·京濱東北</div><div class="rc-dur">8 分</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">東京站<br>KITTE</div><div class="rc-time">10:00</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#93a5a9"></div><div class="rc-line" style="color:#5e6f73">🚶 步行</div><div class="rc-dur">Café 1894·仲通</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">日比谷</div><div class="rc-time">17:05</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#0079c2"></div><div class="rc-line" style="color:#0079c2">都營三田線</div><div class="rc-dur">2 站</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">御成門</div><div class="rc-time">17:20</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#93a5a9"></div><div class="rc-line" style="color:#5e6f73">🚶 步行</div><div class="rc-dur">5 分</div></div>
+    <div class="rc-node"><div class="rc-dot hl"></div><div class="rc-name">芝公園<br>市集</div><div class="rc-time">17:30</div></div>
+  </div>
 
   <div class="table-wrap"><table>
     <thead><tr><th>時段</th><th>行程</th><th>嬰幼兒指標</th><th>導航</th></tr></thead>
@@ -734,6 +1062,51 @@ ul.list.amber li::before{background:var(--amber);}
     <div class="answer">上野 →（銀座線直達）→ 銀座 →（日比谷線直達）→ 六本木
       <small>兩段移動都是一線到底、不用轉車，推車全程最省力</small>
     </div>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-cap">📊 當日時間分配　·　媽媽路線（上）與爸爸女兒路線（下）</div>
+    <div class="tl-track" style="margin-bottom:6px">
+      <div class="tl-block" style="left:20.83%;width:12.5%;background:#a03156">GINZA SIX</div>
+      <div class="tl-block" style="left:33.33%;width:12.5%;background:#e25f48">🍽️ 煉瓦亭（會合）</div>
+      <div class="tl-block" style="left:45.83%;width:25%;background:#a03156">三越·東急·UNIQLO·伊東屋</div>
+      <div class="tl-block" style="left:75%;width:16.67%;background:#c07d16">🎄 六本木</div>
+    </div>
+    <div class="tl-track">
+      <div class="tl-block" style="left:20.83%;width:12.5%;background:#0f8f70">博品館玩具</div>
+      <div class="tl-block" style="left:33.33%;width:12.5%;background:#e25f48">🍽️ 煉瓦亭（會合）</div>
+      <div class="tl-block" style="left:45.83%;width:8.33%;background:#93a5a9">推車午睡</div>
+      <div class="tl-block" style="left:54.17%;width:8.33%;background:#0f8f70">繪本店</div>
+      <div class="tl-block" style="left:62.5%;width:8.33%;background:#a03156">UNIQLO 會合</div>
+      <div class="tl-block" style="left:75%;width:16.67%;background:#c07d16">🎄 六本木</div>
+    </div>
+    <div class="tl-axis">
+      <span class="tl-tick" style="left:0%">08:00</span>
+      <span class="tl-tick" style="left:25%">11:00</span>
+      <span class="tl-tick" style="left:50%">14:00</span>
+      <span class="tl-tick" style="left:75%">17:00</span>
+      <span class="tl-tick" style="left:100%">20:00</span>
+    </div>
+    <div class="tl-legend">
+      <span><i style="background:#a03156"></i>購物</span>
+      <span><i style="background:#0f8f70"></i>親子據點</span>
+      <span><i style="background:#e25f48"></i>會合用餐</span>
+      <span><i style="background:#93a5a9"></i>休息</span>
+      <span><i style="background:#c07d16"></i>市集·燈海</span>
+    </div>
+  </div>
+
+  <h2 class="section-title">移動路線：兩段都是一線到底</h2>
+  <div class="route-chain">
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">上野</div><div class="rc-time">10:00</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#ff9500"></div><div class="rc-line" style="color:#d97f00">銀座線</div><div class="rc-dur">15 分・不轉車</div></div>
+    <div class="rc-node"><div class="rc-dot hl"></div><div class="rc-name">銀座</div><div class="rc-time">10:20</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#93a5a9"></div><div class="rc-line" style="color:#5e6f73">🚶 徒步 10 分圈</div><div class="rc-dur">全部購物點</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">銀座站</div><div class="rc-time">16:40</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#8f9aa0"></div><div class="rc-line" style="color:#6d787d">日比谷線</div><div class="rc-dur">10 分・不轉車</div></div>
+    <div class="rc-node"><div class="rc-dot hl"></div><div class="rc-name">六本木</div><div class="rc-time">17:00</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#8f9aa0"></div><div class="rc-line" style="color:#6d787d">日比谷線</div><div class="rc-dur">30 分・直達</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">上野<br>飯店</div><div class="rc-time">19:30</div></div>
   </div>
 
   <h2 class="section-title">兩條平行路線（10:00–16:30）</h2>
@@ -824,6 +1197,43 @@ ul.list.amber li::before{background:var(--amber);}
   <h1 class="page-title">返程日：08:40 Skyliner，機上就是孩子的午睡時段</h1>
   <p class="page-lede">前晚打包完成，早上只做退房與移動；09:30 前抵成田 T1 從容報到、退稅、逛免稅店。</p>
 
+  <div class="timeline">
+    <div class="tl-cap">📊 當日時間分配　·　機場預留近 3 小時，不趕</div>
+    <div class="tl-track">
+      <div class="tl-block" style="left:0%;width:13.89%;background:#93a5a9">退房準備</div>
+      <div class="tl-block" style="left:13.89%;width:4.63%;background:#177f8f">🚶</div>
+      <div class="tl-block" style="left:18.52%;width:9.26%;background:#1d2088">Skyliner</div>
+      <div class="tl-block" style="left:27.78%;width:32.41%;background:#a03156">報到·退稅·免稅店</div>
+      <div class="tl-block" style="left:60.19%;width:37.04%;background:#0d3b42">✈ BR107 飛行</div>
+    </div>
+    <div class="tl-axis">
+      <span class="tl-tick" style="left:0%">07:00</span>
+      <span class="tl-tick" style="left:22.22%">09:00</span>
+      <span class="tl-tick" style="left:44.44%">11:00</span>
+      <span class="tl-tick" style="left:66.67%">13:00</span>
+      <span class="tl-tick" style="left:97%">15:45</span>
+    </div>
+    <div class="tl-legend">
+      <span><i style="background:#93a5a9"></i>準備</span>
+      <span><i style="background:#1d2088"></i>Skyliner</span>
+      <span><i style="background:#a03156"></i>機場手續·免稅</span>
+      <span><i style="background:#0d3b42"></i>飛行</span>
+    </div>
+  </div>
+
+  <h2 class="section-title">移動路線：與去程完全相反，兩次轉換</h2>
+  <div class="route-chain">
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">飯店</div><div class="rc-time">08:15</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#93a5a9"></div><div class="rc-line" style="color:#5e6f73">🚶 步行</div><div class="rc-dur">3 分</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">京成<br>上野</div><div class="rc-time">08:30</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#1d2088"></div><div class="rc-line" style="color:#1d2088">京成 Skyliner</div><div class="rc-dur">45 分・對號座</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">成田<br>T1</div><div class="rc-time">09:30</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#a03156"></div><div class="rc-line" style="color:#8e2b4c">報到·退稅</div><div class="rc-dur">近 3 小時</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">BR107</div><div class="rc-time">12:25</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#0d3b42"></div><div class="rc-line" style="color:#0d3b42">✈ 飛行</div><div class="rc-dur">3小時20分</div></div>
+    <div class="rc-node"><div class="rc-dot hl"></div><div class="rc-name">高雄</div><div class="rc-time">15:45</div></div>
+  </div>
+
   <div class="table-wrap"><table>
     <thead><tr><th>時間</th><th>行程</th><th>說明</th><th>導航</th></tr></thead>
     <tbody>
@@ -848,6 +1258,88 @@ ul.list.amber li::before{background:var(--amber);}
     <div class="label">GINZA SHOPPING DAY　·　Day 5｜12/17（四）</div>
     <h2>🛍️ 銀座購物攻略：一天走完精品、美妝、文具與幼兒服飾</h2>
     <p>所有據點集中在銀座徒步 10 分鐘圈內，中途可隨時與爸爸女兒會合。全部從銀座線「銀座站」出發。</p>
+  </div>
+
+  <div class="metric-row">
+    <div class="metric coral"><div class="m-label">購物據點</div><div class="m-value">8 處</div><div class="m-note">全在徒步 10 分圈</div></div>
+    <div class="metric teal"><div class="m-label">最遠兩點距離</div><div class="m-value">750 m</div><div class="m-note">東急 ↔ 伊東屋</div></div>
+    <div class="metric green"><div class="m-label">會合次數</div><div class="m-value">2 次</div><div class="m-note">12:00 午餐・15:30 UNIQLO</div></div>
+    <div class="metric amber"><div class="m-label">自由購物時間</div><div class="m-value">4.5 hr</div><div class="m-note">扣掉午餐與會合</div></div>
+  </div>
+
+  <h2 class="section-title">銀座徒步地圖：兩條路線與兩個會合點</h2>
+  <figure class="map-figure">
+    <svg viewBox="0 0 700 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="銀座購物徒步地圖，標示媽媽路線與爸爸女兒路線及兩個會合點">
+      <rect x="0" y="0" width="700" height="640" fill="#f8faf9"/>
+      <line x1="144" y1="577" x2="657" y2="224" stroke="#e6ebe8" stroke-width="26" stroke-linecap="round"/>
+      <line x1="110" y1="214" x2="700" y2="398" stroke="#eef1ef" stroke-width="20" stroke-linecap="round"/>
+      <text x="628" y="248" font-size="11.5" fill="#9aa8a2" font-family="sans-serif" text-anchor="middle">中央通</text>
+      <text x="72" y="212" font-size="11.5" fill="#9aa8a2" font-family="sans-serif">晴海通</text>
+
+      <g fill="none" stroke-width="2.5" stroke-dasharray="8 5">
+        <path d="M304,467 L485,275" stroke="#e25f48"/>
+        <path d="M485,275 L497,334" stroke="#e25f48"/>
+        <path d="M497,334 L110,275" stroke="#e25f48"/>
+        <path d="M110,275 L394,60" stroke="#e25f48"/>
+        <path d="M394,60 L600,178" stroke="#e25f48"/>
+      </g>
+      <g fill="none" stroke-width="2.5" stroke-dasharray="3 6" stroke-linecap="round">
+        <path d="M189,578 L485,275" stroke="#0f8f70"/>
+        <path d="M485,275 L449,215" stroke="#0f8f70"/>
+        <path d="M449,215 L394,60" stroke="#0f8f70"/>
+      </g>
+
+      <g font-family="sans-serif">
+        <rect x="285" y="322" width="38" height="24" rx="6" fill="#0d3b42"/>
+        <text x="304" y="339" font-size="12" fill="#fff" text-anchor="middle" font-weight="700">🚉</text>
+        <text x="276" y="339" font-size="13" fill="#10252c" text-anchor="end" font-weight="700">銀座站</text>
+
+        <circle cx="304" cy="467" r="10" fill="#fff" stroke="#e25f48" stroke-width="3.5"/>
+        <text x="322" y="464" font-size="14" font-weight="700" fill="#10252c">GINZA SIX</text>
+        <text x="322" y="480" font-size="11.5" fill="#a03156">👩 10:30　美妝・精品</text>
+
+        <circle cx="485" cy="275" r="12" fill="#e25f48" stroke="#fff" stroke-width="3"/>
+        <text x="503" y="272" font-size="14" font-weight="700" fill="#10252c">🍽️ 煉瓦亭</text>
+        <text x="503" y="288" font-size="11.5" fill="#e25f48">👨‍👩‍👧 12:00 會合①</text>
+
+        <circle cx="497" cy="334" r="10" fill="#fff" stroke="#e25f48" stroke-width="3.5"/>
+        <text x="515" y="338" font-size="14" font-weight="700" fill="#10252c">銀座三越</text>
+
+        <circle cx="110" cy="275" r="10" fill="#fff" stroke="#e25f48" stroke-width="3.5"/>
+        <text x="110" y="302" font-size="14" font-weight="700" fill="#10252c" text-anchor="middle">東急プラザ</text>
+        <text x="110" y="318" font-size="11.5" fill="#a03156" text-anchor="middle">👩 13:30　HANDS</text>
+
+        <circle cx="394" cy="60" r="12" fill="#e25f48" stroke="#fff" stroke-width="3"/>
+        <text x="412" y="57" font-size="14" font-weight="700" fill="#10252c">UNIQLO TOKYO</text>
+        <text x="412" y="73" font-size="11.5" fill="#e25f48">👨‍👩‍👧 15:30 會合②・幼兒服飾</text>
+
+        <circle cx="600" cy="178" r="10" fill="#fff" stroke="#e25f48" stroke-width="3.5"/>
+        <text x="584" y="175" font-size="14" font-weight="700" fill="#10252c" text-anchor="end">伊東屋</text>
+        <text x="584" y="191" font-size="11.5" fill="#a03156" text-anchor="end">👩 12 層文具</text>
+
+        <circle cx="449" cy="215" r="10" fill="#fff" stroke="#0f8f70" stroke-width="3.5"/>
+        <text x="465" y="212" font-size="14" font-weight="700" fill="#10252c">教文館</text>
+        <text x="465" y="228" font-size="11.5" fill="#0f8f70">👨‍👧 14:30　繪本店</text>
+
+        <circle cx="189" cy="578" r="10" fill="#fff" stroke="#0f8f70" stroke-width="3.5"/>
+        <text x="207" y="575" font-size="14" font-weight="700" fill="#10252c">博品館 TOY PARK</text>
+        <text x="207" y="591" font-size="11.5" fill="#0f8f70">👨‍👧 10:30　四層樓玩具</text>
+      </g>
+
+      <g font-family="sans-serif">
+        <line x1="500" y1="600" x2="634" y2="600" stroke="#5e6f73" stroke-width="2"/>
+        <line x1="500" y1="595" x2="500" y2="605" stroke="#5e6f73" stroke-width="2"/>
+        <line x1="634" y1="595" x2="634" y2="605" stroke="#5e6f73" stroke-width="2"/>
+        <text x="567" y="618" font-size="11.5" fill="#5e6f73" text-anchor="middle">200 公尺</text>
+      </g>
+    </svg>
+    <figcaption>依實際經緯度等比繪製。—— 珊瑚色虛線為媽媽路線，⋯⋯ 綠色點線為爸爸女兒路線，實心圓為兩個會合點。</figcaption>
+  </figure>
+
+  <div class="day-legend">
+    <span><i style="background:#e25f48"></i>👩 媽媽路線</span>
+    <span><i style="background:#0f8f70"></i>👨‍👧 爸爸女兒路線</span>
+    <span><i style="background:#0d3b42"></i>銀座站（銀座線・日比谷線）</span>
   </div>
 
   <h2 class="section-title">媽媽路線時間表</h2>
@@ -976,6 +1468,54 @@ ul.list.amber li::before{background:var(--amber);}
     <div class="label">CHRISTMAS MARKET GUIDE</div>
     <h2>🎄 東京聖誕市集攻略：四晚四市集，帶著推車這樣逛</h2>
     <p>本行程一晚一市集、由近到遠排序。共通原則：開門時段入場避人潮、20:00 前離場顧作息、熱食熱飲分食取暖。</p>
+  </div>
+
+  <div class="metric-row">
+    <div class="metric amber"><div class="m-label">市集場次</div><div class="m-value">4 場</div><div class="m-note">Day 2・3・4・5 各一晚</div></div>
+    <div class="metric coral"><div class="m-label">需購票</div><div class="m-value">1 場</div><div class="m-note">神宮外苑・11/19 開賣</div></div>
+    <div class="metric teal"><div class="m-label">建議停留</div><div class="m-value">1.5–2 hr</div><div class="m-note">開門入場・20:00 前離場</div></div>
+    <div class="metric green"><div class="m-label">傍晚體感溫度</div><div class="m-value">3–7°C</div><div class="m-note">全部為戶外會場</div></div>
+  </div>
+
+  <h2 class="section-title">四晚市集時間帶對照：全部抓開門時段入場</h2>
+  <div class="mkt-chart">
+    <div class="mkt-row">
+      <div class="mkt-label">Day 2 晴空塔<small>12/14（一）</small></div>
+      <div class="mkt-track">
+        <div class="mkt-bar" style="left:12.5%;width:37.5%;background:#177f8f">16:30–18:00</div>
+        <div class="mkt-pin" style="left:37.5%" data-label="17:30 點燈"></div>
+      </div>
+    </div>
+    <div class="mkt-row">
+      <div class="mkt-label">Day 3 神宮外苑<small>12/15（二）· 需購票</small></div>
+      <div class="mkt-track">
+        <div class="mkt-bar" style="left:37.5%;width:50%;background:#0f8f70">17:30–19:30</div>
+      </div>
+    </div>
+    <div class="mkt-row">
+      <div class="mkt-label">Day 4 芝公園<small>12/16（三）</small></div>
+      <div class="mkt-track">
+        <div class="mkt-bar" style="left:37.5%;width:50%;background:#c07d16">17:30–19:30</div>
+      </div>
+    </div>
+    <div class="mkt-row">
+      <div class="mkt-label">Day 5 六本木<small>12/17（四）</small></div>
+      <div class="mkt-track">
+        <div class="mkt-bar" style="left:25%;width:50%;background:#e25f48">17:00–19:00</div>
+        <div class="mkt-pin" style="left:25%" data-label="17:00 燈海"></div>
+      </div>
+    </div>
+    <div class="mkt-axis">
+      <div></div>
+      <div class="ax">
+        <span style="left:0%">16:00</span>
+        <span style="left:25%">17:00</span>
+        <span style="left:50%">18:00</span>
+        <span style="left:75%">19:00</span>
+        <span style="left:100%">20:00</span>
+      </div>
+    </div>
+    <div class="note tip" style="margin:12px 0 0"><b>💡 共通節奏：</b>四場都落在 17:00–19:30 之間，最晚 19:30 收，回飯店約 20:30 前——與孩子作息不衝突。</div>
   </div>
 
   <h2 class="section-title">四大市集比較</h2>
@@ -1115,6 +1655,22 @@ ul.list.amber li::before{background:var(--amber);}
     </div>
   </div>
 
+  <h2 class="section-title">市集必吃必買對照</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>品項</th><th>類型</th><th>說明</th><th>幼兒適合度</th><th>哪一場最齊</th></tr></thead>
+    <tbody>
+      <tr><td><b>熱紅酒 Glühwein</b></td><td>熱飲</td><td>附紀念馬克杯，杯子為押金制（不退可帶回收藏）</td><td>❌ 含酒精，大人限定</td><td>神宮外苑</td></tr>
+      <tr><td><b>熱蘋果汁</b></td><td>熱飲</td><td>兒童版熱飲，同樣附杯</td><td>✅ 放涼後可分食</td><td>各場皆有</td></tr>
+      <tr><td><b>德式香腸</b></td><td>熱食</td><td>現烤，份量大可全家分</td><td>⚠️ 需剪碎、注意鹹度</td><td>神宮外苑・芝公園</td></tr>
+      <tr><td><b>烤馬鈴薯</b></td><td>熱食</td><td>質地軟、不辣，最好入口</td><td>✅ 幼兒首選</td><td>各場皆有</td></tr>
+      <tr><td><b>胡桃鉗木偶</b></td><td>雜貨</td><td>德國直送，經典聖誕擺飾</td><td>伴手禮</td><td><b>神宮外苑</b></td></tr>
+      <tr><td><b>薰香木偶</b></td><td>雜貨</td><td>傳統德式香氛擺飾</td><td>伴手禮</td><td><b>神宮外苑</b></td></tr>
+      <tr><td><b>玻璃吊飾</b></td><td>雜貨</td><td>聖誕樹裝飾，易碎需妥善包裝</td><td>伴手禮 ⚠️ 易碎</td><td>神宮外苑・六本木</td></tr>
+      <tr><td><b>手工蠟燭・木製雜貨</b></td><td>雜貨</td><td>質感最高，適合送禮</td><td>伴手禮</td><td><b>六本木</b></td></tr>
+    </tbody>
+  </table></div>
+  <div class="note tip"><b>💡 採買策略：</b>Day 3 神宮外苑品項最齊、先看不急著買；Day 5 六本木是最後一場，把還想要的一次補齊，當晚剛好打包。</div>
+
   <h2 class="section-title">帶 22 個月幼兒逛市集：通用守則</h2>
   <div class="grid cols-3">
     <div class="card soft-green">
@@ -1154,6 +1710,122 @@ ul.list.amber li::before{background:var(--amber);}
     <h2>🗺️ 全行程地圖：依日期分圖層，一次看完六天所有地點</h2>
     <p>下載 KML 檔匯入 Google My Maps，就能在手機 Google 地圖離線查看全部 40 個地點，並依日期開關圖層。</p>
   </div>
+
+  <div class="metric-row">
+    <div class="metric teal"><div class="m-label">地圖標記點</div><div class="m-value">40 個</div><div class="m-note">含說明與時間</div></div>
+    <div class="metric green"><div class="m-label">圖層數</div><div class="m-value">8 層</div><div class="m-note">可依日期開關</div></div>
+    <div class="metric amber"><div class="m-label">電車段數</div><div class="m-value">14 段</div><div class="m-note">含步行接駁</div></div>
+    <div class="metric coral"><div class="m-label">需轉乘的段</div><div class="m-value">僅 2 段</div><div class="m-note">其餘皆一線直達</div></div>
+  </div>
+
+  <h2 class="section-title">移動地圖總覽：上野為圓心，四個方向各去一天</h2>
+  <figure class="map-figure">
+    <svg viewBox="0 0 820 610" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="東京行程移動地圖，以上野為中心連往淺草晴空塔、神宮外苑、東京車站芝公園、銀座六本木">
+      <rect x="0" y="0" width="820" height="610" fill="#f8faf9"/>
+      <path d="M820,430 C740,470 700,540 690,610 L820,610 Z" fill="#dcecf2"/>
+      <path d="M612,52 C640,120 650,200 628,285 C610,360 590,440 574,530" stroke="#c3dfe8" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <text x="646" y="230" font-size="11" fill="#8aa8b2" font-family="sans-serif">隅田川</text>
+      <text x="742" y="560" font-size="11" fill="#8aa8b2" font-family="sans-serif">東京灣</text>
+      <ellipse cx="355" cy="323" rx="50" ry="35" fill="#e4eee6" stroke="#cadfd0" stroke-width="1.5"/>
+      <text x="355" y="328" font-size="12" fill="#7d9384" text-anchor="middle" font-family="sans-serif">皇居</text>
+
+      <g stroke-width="2" fill="none" stroke-dasharray="7 5">
+        <path d="M485,110 Q556,86 627,99" stroke="#177f8f"/>
+        <path d="M627,99 Q676,105 713,135" stroke="#177f8f"/>
+        <path d="M485,110 Q290,160 146,366" stroke="#0f8f70"/>
+        <path d="M485,110 Q448,235 422,366" stroke="#c07d16"/>
+        <path d="M422,366 Q382,450 318,537" stroke="#c07d16"/>
+        <path d="M485,110 Q510,270 443,419" stroke="#e25f48"/>
+        <path d="M443,419 Q330,445 212,511" stroke="#e25f48"/>
+        <path d="M485,102 Q540,58 592,36" stroke="#93a5a9"/>
+      </g>
+
+      <text x="556" y="76" font-size="11" fill="#177f8f" text-anchor="middle" font-family="sans-serif">銀座線 5分</text>
+      <text x="700" y="88" font-size="11" fill="#177f8f" text-anchor="middle" font-family="sans-serif">1站</text>
+      <text x="286" y="196" font-size="11" fill="#0f8f70" text-anchor="middle" font-family="sans-serif">JR 25分</text>
+      <text x="470" y="246" font-size="11" fill="#c07d16" text-anchor="start" font-family="sans-serif">JR 8分</text>
+      <text x="352" y="452" font-size="11" fill="#c07d16" text-anchor="middle" font-family="sans-serif">三田線</text>
+      <text x="516" y="278" font-size="11" fill="#e25f48" text-anchor="start" font-family="sans-serif">銀座線 15分</text>
+      <text x="330" y="440" font-size="11" fill="#e25f48" text-anchor="middle" font-family="sans-serif">日比谷線 10分</text>
+
+      <rect x="592" y="12" width="216" height="34" rx="9" fill="#eef2f1" stroke="#d3dcd8"/>
+      <text x="700" y="34" font-size="12.5" fill="#5e6f73" text-anchor="middle" font-family="sans-serif">✈ 成田 T1 ⇄ Skyliner 45 分</text>
+
+      <g font-family="sans-serif">
+        <circle cx="485" cy="110" r="13" fill="#0d3b42"/>
+        <circle cx="485" cy="110" r="5" fill="#fff"/>
+        <text x="485" y="84" font-size="15" font-weight="700" fill="#10252c" text-anchor="middle">上野（基地）</text>
+        <text x="485" y="139" font-size="11.5" fill="#5e6f73" text-anchor="middle">飯店・動物園・阿美橫丁</text>
+
+        <circle cx="627" cy="99" r="9" fill="#fff" stroke="#177f8f" stroke-width="3.5"/>
+        <text x="627" y="74" font-size="14" font-weight="700" fill="#10252c" text-anchor="middle">淺草</text>
+
+        <circle cx="713" cy="135" r="9" fill="#fff" stroke="#177f8f" stroke-width="3.5"/>
+        <text x="713" y="162" font-size="14" font-weight="700" fill="#10252c" text-anchor="middle">晴空塔・押上</text>
+        <text x="713" y="178" font-size="11.5" fill="#177f8f" text-anchor="middle">Day 2 🎄</text>
+
+        <circle cx="146" cy="366" r="9" fill="#fff" stroke="#0f8f70" stroke-width="3.5"/>
+        <text x="146" y="393" font-size="14" font-weight="700" fill="#10252c" text-anchor="middle">神宮外苑</text>
+        <text x="146" y="409" font-size="11.5" fill="#0f8f70" text-anchor="middle">Day 3 🎄</text>
+
+        <circle cx="422" cy="366" r="9" fill="#fff" stroke="#c07d16" stroke-width="3.5"/>
+        <text x="422" y="341" font-size="14" font-weight="700" fill="#10252c" text-anchor="middle">東京車站・丸之內</text>
+
+        <circle cx="318" cy="537" r="9" fill="#fff" stroke="#c07d16" stroke-width="3.5"/>
+        <text x="318" y="564" font-size="14" font-weight="700" fill="#10252c" text-anchor="middle">芝公園・東京鐵塔</text>
+        <text x="318" y="580" font-size="11.5" fill="#c07d16" text-anchor="middle">Day 4 🎄</text>
+
+        <circle cx="443" cy="419" r="9" fill="#fff" stroke="#e25f48" stroke-width="3.5"/>
+        <text x="459" y="416" font-size="14" font-weight="700" fill="#10252c" text-anchor="start">銀座</text>
+        <text x="459" y="432" font-size="11.5" fill="#e25f48" text-anchor="start">Day 5 🛍️</text>
+
+        <circle cx="212" cy="511" r="9" fill="#fff" stroke="#e25f48" stroke-width="3.5"/>
+        <text x="196" y="508" font-size="14" font-weight="700" fill="#10252c" text-anchor="end">六本木</text>
+        <text x="196" y="524" font-size="11.5" fill="#e25f48" text-anchor="end">Day 5 🎄</text>
+      </g>
+
+      <g font-family="sans-serif">
+        <line x1="52" y1="576" x2="189" y2="576" stroke="#5e6f73" stroke-width="2"/>
+        <line x1="52" y1="571" x2="52" y2="581" stroke="#5e6f73" stroke-width="2"/>
+        <line x1="189" y1="571" x2="189" y2="581" stroke="#5e6f73" stroke-width="2"/>
+        <text x="120" y="594" font-size="11.5" fill="#5e6f73" text-anchor="middle">2 公里</text>
+        <path d="M44,26 L44,54 M44,26 L38,36 M44,26 L50,36" stroke="#5e6f73" stroke-width="2" fill="none"/>
+        <text x="60" y="36" font-size="12" fill="#5e6f73">N</text>
+      </g>
+    </svg>
+    <figcaption>依實際經緯度等比繪製。虛線為各日主要移動方向，車程為概略值，實際班次以 Google 地圖為準。</figcaption>
+  </figure>
+
+  <div class="day-legend">
+    <span><i style="background:#0d3b42"></i>上野基地</span>
+    <span><i style="background:#177f8f"></i>Day 2 淺草・晴空塔</span>
+    <span><i style="background:#0f8f70"></i>Day 3 神宮外苑</span>
+    <span><i style="background:#c07d16"></i>Day 4 丸之內・芝公園</span>
+    <span><i style="background:#e25f48"></i>Day 5 銀座・六本木</span>
+  </div>
+
+  <h2 class="section-title">全行程交通總表</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>日</th><th>起點</th><th>路線</th><th>終點</th><th>約需</th><th>轉乘</th></tr></thead>
+    <tbody>
+      <tr><td>D1</td><td>成田 T1</td><td><b style="color:#1d2088">京成 Skyliner</b></td><td>京成上野</td><td>45 分</td><td>直達</td></tr>
+      <tr><td>D1</td><td>京成上野</td><td>🚶 步行</td><td>飯店</td><td>3 分</td><td>—</td></tr>
+      <tr><td>D2</td><td>上野</td><td><b style="color:#d97f00">銀座線</b></td><td>淺草</td><td>5 分</td><td>直達</td></tr>
+      <tr><td>D2</td><td>淺草</td><td><b style="color:#d13f82">都營淺草線</b>（或步行吾妻橋）</td><td>押上・晴空塔</td><td>3 分／步行 15 分</td><td>直達</td></tr>
+      <tr><td>D2</td><td>押上</td><td>半藏門線／都營淺草線</td><td>上野</td><td>約 20 分</td><td><span class="badge amber">1 次</span></td></tr>
+      <tr><td>D3</td><td>上野</td><td><b style="color:#6f9a17">JR 山手線 → 中央・總武線</b></td><td>信濃町</td><td>約 25 分</td><td><span class="badge amber">1 次</span></td></tr>
+      <tr><td>D3</td><td>信濃町</td><td>🚶 步行</td><td>神宮外苑會場</td><td>8 分</td><td>—</td></tr>
+      <tr><td>D4</td><td>上野</td><td><b style="color:#6f9a17">JR 山手線／京濱東北線</b></td><td>東京</td><td>8 分</td><td>直達</td></tr>
+      <tr><td>D4</td><td>東京・丸之內</td><td>🚶 步行（KITTE → Café 1894 → 仲通）</td><td>日比谷</td><td>徒步圈</td><td>—</td></tr>
+      <tr><td>D4</td><td>日比谷</td><td><b style="color:#0079c2">都營三田線</b></td><td>御成門</td><td>約 4 分</td><td>直達</td></tr>
+      <tr><td>D4</td><td>御成門</td><td>🚶 步行</td><td>芝公園市集</td><td>5 分</td><td>—</td></tr>
+      <tr><td>D5</td><td>上野</td><td><b style="color:#d97f00">銀座線</b></td><td>銀座</td><td>約 15 分</td><td>直達</td></tr>
+      <tr><td>D5</td><td>銀座</td><td><b style="color:#6d787d">日比谷線</b></td><td>六本木</td><td>約 10 分</td><td>直達</td></tr>
+      <tr><td>D5</td><td>六本木</td><td><b style="color:#6d787d">日比谷線</b></td><td>上野</td><td>約 30 分</td><td>直達</td></tr>
+      <tr><td>D6</td><td>京成上野</td><td><b style="color:#1d2088">京成 Skyliner</b></td><td>成田 T1</td><td>45 分</td><td>直達</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note warn"><b>⚠️ 時間為概估值：</b>以上車程供動線規劃參考，實際班次與月台請以出發當日 Google 地圖查詢為準（尤其 D2 押上回程與 D3 上野→信濃町這兩段有轉乘）。</div>
 
   <h2 class="section-title">第一步：下載地圖檔</h2>
   <div class="card">
