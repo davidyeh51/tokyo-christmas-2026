@@ -317,6 +317,24 @@ ul.list.amber li::before{background:var(--amber);}
 .rc-line{font-size:.7rem;font-weight:700;text-align:center;line-height:1.35;}
 .rc-dur{font-size:.66rem;color:var(--muted);text-align:center;line-height:1.35;}
 
+.tab.tax-tab{color:#ffe08a;}
+.tab.tax-tab.active{color:#9a6a0d;}
+.tax-hero{background:linear-gradient(135deg,#5a4205,#9a6a0d);color:#fff;border-radius:16px;padding:24px 28px;margin-bottom:20px;}
+.tax-hero .label{font-size:.78rem;letter-spacing:.14em;opacity:.85;}
+.tax-hero h2{font-size:1.4rem;font-weight:800;margin:4px 0 6px;}
+.tax-hero p{font-size:.9rem;opacity:.92;}
+.flow-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:14px 0;}
+@media(max-width:760px){.flow-steps{grid-template-columns:1fr 1fr;}}
+.flow-step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;}
+.flow-step .no{width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;margin-bottom:8px;}
+.flow-step.hot{border-color:#f3cfc6;background:linear-gradient(180deg,var(--coral-soft),#fff);}
+.flow-step.hot .no{background:var(--coral);}
+.flow-step .where{font-size:.72rem;font-weight:700;color:var(--teal);letter-spacing:.06em;}
+.flow-step h3{font-size:.98rem;font-weight:800;margin:2px 0 6px;}
+.flow-step p{font-size:.82rem;color:var(--muted);line-height:1.6;}
+td.old{color:var(--muted);}
+td.new{font-weight:600;}
+
 /* ===== Market timing chart ===== */
 .mkt-chart{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px 14px;margin:14px 0;}
 .mkt-row{display:grid;grid-template-columns:140px 1fr;gap:12px;align-items:center;margin-bottom:9px;}
@@ -396,6 +414,7 @@ ul.list.amber li::before{background:var(--amber);}
       <button class="tab" data-page="day5">Day 5<span class="sub">12/17 銀座・六本木</span></button>
       <button class="tab" data-page="day6">Day 6<span class="sub">12/18 返程</span></button>
       <button class="tab shop-tab" data-page="shopping">🛍️ 媽媽購物<span class="sub">Ginza Shopping</span></button>
+      <button class="tab tax-tab" data-page="taxfree">💴 退稅攻略<span class="sub">Tax-free 新制</span></button>
       <button class="tab market-tab" data-page="market">🎄 市集攻略<span class="sub">Christmas Markets</span></button>
       <button class="tab map-tab" data-page="map">🗺️ 行程地圖<span class="sub">Google My Maps</span></button>
     </nav>
@@ -416,6 +435,8 @@ ul.list.amber li::before{background:var(--amber);}
   </div>
 
   <div class="note tip"><b>📌 v2 更新重點：</b>每日餐廳全部指定（黑船亭、トリトン、敘敘苑、根室花まる、Café 1894、煉瓦亭）；Day 5 由「阿卡將＋六本木 Hills」改為<b>銀座媽媽購物日</b>（爸爸帶女兒走博品館／繪本店平行路線），幼兒用品改在 UNIQLO 銀座旗艦店採購。</div>
+
+  <div class="note warn"><b>💴 退稅新制提醒：</b>日本 2026/11/1 起改為「先付後退」，本趟全程適用——結帳付含稅全額，返程在成田<b>先過海關確認、再託運行李</b>。詳見 <a href="#taxfree">💴 退稅攻略</a>。</div>
 
   <div class="metric-row">
     <div class="metric teal"><div class="m-label">行程天數</div><div class="m-value">6 天</div><div class="m-note">5 晚，住宿不換點</div></div>
@@ -661,6 +682,7 @@ ul.list.amber li::before{background:var(--amber);}
     <div class="check-item"><div class="cb"></div><div>旅平險：涵蓋嬰幼兒醫療</div></div>
     <div class="check-item"><div class="cb"></div><div>確認晴空塔／芝公園／六本木聖誕市集 2026 年實際日期與時間</div></div>
     <div class="check-item"><div class="cb"></div><div>各餐廳 Google Maps 即時評價與營業時間最終確認</div></div>
+    <div class="check-item"><div class="cb"></div><div><b>退稅新制</b>：信用卡額度多留含稅 10%；免稅收據一單一袋保管；返程<b>先海關、後託運</b>（見 💴 退稅攻略）</div></div>
     <div class="check-item"><div class="cb"></div><div>下載 Uber App 並綁定信用卡（雨天或孩子睡著時備用）</div></div>
   </div>
 
@@ -1196,7 +1218,7 @@ ul.list.amber li::before{background:var(--amber);}
 <main class="page" id="page-day6">
   <div class="eyebrow">Day 6｜12/18（五）</div>
   <h1 class="page-title">返程日：08:40 Skyliner，機上就是孩子的午睡時段</h1>
-  <p class="page-lede">前晚打包完成，早上只做退房與移動；09:30 前抵成田 T1 從容報到、退稅、逛免稅店。</p>
+  <p class="page-lede">前晚打包完成，早上只做退房與移動；09:30 抵成田 T1 後，<b>先找海關確認免稅品、再去長榮託運</b>——順序反了可能退不到稅。</p>
 
   <div class="timeline">
     <div class="tl-cap">📊 當日時間分配　·　機場預留近 3 小時，不趕</div>
@@ -1204,7 +1226,9 @@ ul.list.amber li::before{background:var(--amber);}
       <div class="tl-block" style="left:0%;width:13.89%;background:#93a5a9">退房準備</div>
       <div class="tl-block" style="left:13.89%;width:4.63%;background:#177f8f">🚶</div>
       <div class="tl-block" style="left:18.52%;width:9.26%;background:#1d2088">Skyliner</div>
-      <div class="tl-block" style="left:27.78%;width:32.41%;background:#a03156">報到·退稅·免稅店</div>
+      <div class="tl-block" style="left:27.78%;width:5.56%;background:#e25f48">①海關</div>
+      <div class="tl-block" style="left:33.33%;width:8.33%;background:#177f8f">②託運</div>
+      <div class="tl-block" style="left:41.67%;width:18.52%;background:#a03156">③出境·免稅店</div>
       <div class="tl-block" style="left:60.19%;width:37.04%;background:#0d3b42">✈ BR107 飛行</div>
     </div>
     <div class="tl-axis">
@@ -1217,7 +1241,9 @@ ul.list.amber li::before{background:var(--amber);}
     <div class="tl-legend">
       <span><i style="background:#93a5a9"></i>準備</span>
       <span><i style="background:#1d2088"></i>Skyliner</span>
-      <span><i style="background:#a03156"></i>機場手續·免稅</span>
+      <span><i style="background:#e25f48"></i>海關免稅確認</span>
+      <span><i style="background:#177f8f"></i>報到託運</span>
+      <span><i style="background:#a03156"></i>出境·免稅店</span>
       <span><i style="background:#0d3b42"></i>飛行</span>
     </div>
   </div>
@@ -1229,7 +1255,7 @@ ul.list.amber li::before{background:var(--amber);}
     <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">京成<br>上野</div><div class="rc-time">08:30</div></div>
     <div class="rc-link"><div class="rc-bar" style="background:#1d2088"></div><div class="rc-line" style="color:#1d2088">京成 Skyliner</div><div class="rc-dur">45 分・對號座</div></div>
     <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">成田<br>T1</div><div class="rc-time">09:30</div></div>
-    <div class="rc-link"><div class="rc-bar" style="background:#a03156"></div><div class="rc-line" style="color:#8e2b4c">報到·退稅</div><div class="rc-dur">近 3 小時</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#a03156"></div><div class="rc-line" style="color:#b93f2b">①海關 → ②託運</div><div class="rc-dur">順序不可顛倒</div></div>
     <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">BR107</div><div class="rc-time">12:25</div></div>
     <div class="rc-link"><div class="rc-bar" style="background:#0d3b42"></div><div class="rc-line" style="color:#0d3b42">✈ 飛行</div><div class="rc-dur">3小時20分</div></div>
     <div class="rc-node"><div class="rc-dot hl"></div><div class="rc-name">高雄</div><div class="rc-time">15:45</div></div>
@@ -1243,14 +1269,15 @@ ul.list.amber li::before{background:var(--amber);}
         <td><a class="map-btn route walk" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%26Here%20TOKYO%20UENO&amp;destination=%E4%BA%AC%E6%88%90%E4%B8%8A%E9%87%8E%E9%A7%85&amp;travelmode=walking">步行</a></td></tr>
       <tr><td class="time">08:40</td><td><b>搭乘 Skyliner</b></td><td>約 45 分鐘</td>
         <td><a class="map-btn route" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%BA%AC%E6%88%90%E4%B8%8A%E9%87%8E%E9%A7%85&amp;destination=%E6%88%90%E7%94%B0%E7%A9%BA%E6%B8%AF%E7%AC%AC1%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB&amp;travelmode=transit">路線</a></td></tr>
-      <tr><td class="time">09:30</td><td><b>抵達成田 T1</b></td><td>長榮報到、退稅、免稅店</td>
+      <tr><td class="time">09:30</td><td><b>抵達成田 T1</b></td><td><b>① 先到海關辦免稅品持出確認</b>（帶護照＋免稅商品＋收據）→ ② 長榮報到、託運行李 → ③ 出境、機場免稅店<br><a href="#taxfree" class="goto-tax">→ 看退稅攻略</a></td>
         <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%88%90%E7%94%B0%E7%A9%BA%E6%B8%AF%E7%AC%AC1%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB">地圖</a></td></tr>
       <tr><td class="time">12:25</td><td><b>BR107 起飛</b></td><td>機上為孩子的午睡時段，順勢入睡</td><td>—</td></tr>
       <tr><td class="time">15:45</td><td><b>抵達高雄</b></td><td>領車返家</td><td>—</td></tr>
     </tbody>
   </table></div>
 
-  <div class="note tip"><b>💡 提醒：</b>Skyliner 回程票建議與去程一起先買好電子票；退稅商品放隨身行李備查。</div>
+  <div class="note warn"><b>⚠️ 退稅新制（11/1 起）：</b>本趟全程適用「先付後退」。免稅商品<b>不要先放進要託運的行李箱封箱</b>——海關可能要求當場看實物，託運後就無法查驗。前一晚打包時，把免稅品集中在一個袋子或最上層，方便出示。</div>
+  <div class="note tip"><b>💡 提醒：</b>Skyliner 回程票建議與去程一起先買好電子票。</div>
 </main>
 
 <!-- ============ 媽媽購物 ============ -->
@@ -1365,7 +1392,7 @@ ul.list.amber li::before{background:var(--amber);}
       <h3>GINZA SIX</h3>
       <p>銀座最大複合商場，一次逛完精品與美妝。</p>
       <ul class="list coral" style="margin-top:8px">
-        <li><b>B2 美妝樓層</b>：日系與國際品牌齊全，退稅櫃檯集中</li>
+        <li><b>B2 美妝樓層</b>：日系與國際品牌齊全；新制下先付全額，結帳時確認退款方式</li>
         <li><b>6F 蔦屋書店</b>：藝術書籍與生活雜貨，逛累可在此喘口氣</li>
         <li>精品：YSL、CELINE、Dior 等旗艦店</li>
         <li>6F 餐廳樓層空間大、兒童椅完備——煉瓦亭的備案</li>
@@ -1378,7 +1405,7 @@ ul.list.amber li::before{background:var(--amber);}
         <li>三越：日系服飾、和風伴手禮、地下食品街</li>
         <li>東急プラザ：<b>HANDS EXPO</b> 有大量日本設計小物</li>
         <li>兩館步行 5 分鐘內，可連著逛</li>
-        <li>百貨多設免稅櫃檯，記得帶護照</li>
+        <li>百貨多設免稅櫃檯，記得帶護照（新制：先付後退）</li>
       </ul>
     </div>
     <div class="card soft-green">
@@ -1436,11 +1463,11 @@ ul.list.amber li::before{background:var(--amber);}
   <h2 class="section-title">購物實務提醒</h2>
   <div class="grid cols-3">
     <div class="card soft-green">
-      <h3>💳 免稅與付款</h3>
+      <h3>💳 免稅與付款（新制）</h3>
       <ul class="list">
-        <li>免稅門檻 5,000 日圓以上，<b>務必帶護照</b></li>
-        <li>百貨多為集中退稅櫃檯，當日消費可合併計算</li>
-        <li>信用卡通用；小店與市集備現金</li>
+        <li><b>先付含稅全額</b>，離境經海關確認後才退稅，<b>務必帶護照</b></li>
+        <li>要在日本當場用的東西（零食、尿布）<b>分開結帳</b>，一張收據一項不合格就全單作廢</li>
+        <li>詳見 <a href="#taxfree">💴 退稅攻略</a></li>
       </ul>
     </div>
     <div class="card soft-amber">
@@ -1459,6 +1486,158 @@ ul.list.amber li::before{background:var(--amber);}
         <li>當晚就要打包，別把採購拖到最後一刻</li>
       </ul>
     </div>
+  </div>
+</main>
+
+<!-- ============ 退稅攻略 ============ -->
+<main class="page" id="page-taxfree">
+  <div class="tax-hero">
+    <div class="label">JAPAN TAX-FREE · 2026/11/1 新制</div>
+    <h2>💴 日本退稅新制：這趟全程「先付後退」，返程要先過海關再託運</h2>
+    <p>新制 2026/11/1 上路、不設過渡期。我們 12/13 出發，所有免稅購物都適用新制——結帳付含稅全額，離境經海關確認後才退稅。</p>
+  </div>
+
+  <div class="metric-row">
+    <div class="metric coral"><div class="m-label">新制上路</div><div class="m-value">11/1</div><div class="m-note">本趟 12/13 出發 → 全程適用</div></div>
+    <div class="metric amber"><div class="m-label">結帳先付</div><div class="m-value">含稅全額</div><div class="m-note">消費稅 10%（食品 8%）</div></div>
+    <div class="metric teal"><div class="m-label">出境期限</div><div class="m-value">90 天</div><div class="m-note">購買次日起算</div></div>
+    <div class="metric green"><div class="m-label">海關判定單位</div><div class="m-value">1 張收據</div><div class="m-note">一項不合格 → 全單不退</div></div>
+  </div>
+
+  <h2 class="section-title">新制四步驟：買的時候付全額，回程才拿回稅金</h2>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="no">1</div>
+      <div class="where">店內結帳</div>
+      <h3>出示護照、付含稅全額</h3>
+      <p>店家把購買紀錄與護照資料上傳國稅廳系統。部分店家會請你掃 QR Code 登記退款帳戶。</p>
+    </div>
+    <div class="flow-step">
+      <div class="no">2</div>
+      <div class="where">旅途中</div>
+      <h3>商品與收據都要留著</h3>
+      <p>免稅品不能在日本用掉、送人或遺失。同一張收據的商品集中放一袋，出境時要能拿出來。</p>
+    </div>
+    <div class="flow-step hot">
+      <div class="no">3</div>
+      <div class="where">成田 T1｜託運前</div>
+      <h3>先找海關確認，再去報到</h3>
+      <p>出示護照，海關可能要求當場看商品。<b>一旦先託運，海關無法查驗實物，可能退不到稅。</b></p>
+    </div>
+    <div class="flow-step">
+      <div class="no">4</div>
+      <div class="where">回台後</div>
+      <h3>退款事後入帳</h3>
+      <p>由店家或受託退款業者退回信用卡、電子支付或登記帳戶，通常離境後一段時間才到帳，不一定能退現金。</p>
+    </div>
+  </div>
+
+  <h2 class="section-title">返程機場動線（Day 6｜12/18）</h2>
+  <div class="route-chain">
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">抵達<br>成田 T1</div><div class="rc-time">09:30</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#e25f48"></div><div class="rc-line" style="color:#b93f2b">① 海關免稅確認</div><div class="rc-dur">護照＋商品＋收據</div></div>
+    <div class="rc-node"><div class="rc-dot hl"></div><div class="rc-name">確認<br>完成</div><div class="rc-time">託運前</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#177f8f"></div><div class="rc-line" style="color:#177f8f">② 長榮報到</div><div class="rc-dur">此時才託運行李</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">安檢<br>出境</div><div class="rc-time">—</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#a03156"></div><div class="rc-line" style="color:#8e2b4c">③ 機場免稅店</div><div class="rc-dur">另一套制度</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">BR107</div><div class="rc-time">12:25</div></div>
+  </div>
+  <div class="note warn"><b>⚠️ 現場確認：</b>成田 T1 新制下的海關免稅確認位置與排隊時間，出發前可再查機場官網公告；抵達後若找不到，直接問航空公司櫃檯「税関の免税確認」在哪裡，<b>先別交運行李</b>。</div>
+
+  <h2 class="section-title">新舊制對照：最大差別在「什麼時候拿到稅金」</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>項目</th><th>舊制（～2026/10/31）</th><th>新制（2026/11/1～）</th></tr></thead>
+    <tbody>
+      <tr><td><b>結帳</b></td><td class="old">出示護照，當場用免稅價購買</td><td class="new">先付含稅全額（店家可自行承擔風險先退，依店而定）</td></tr>
+      <tr><td><b>拿回稅金</b></td><td class="old">結帳當下就沒付</td><td class="new">離境經海關確認攜出後才退</td></tr>
+      <tr><td><b>退款方式</b></td><td class="old">—</td><td class="new">以信用卡、電子支付、指定帳戶為主；現金依業者而定</td></tr>
+      <tr><td><b>商品分類</b></td><td class="old">一般物品／消耗品分開計算</td><td class="new">不再區分</td></tr>
+      <tr><td><b>消耗品上限</b></td><td class="old">50 萬日圓</td><td class="new">取消</td></tr>
+      <tr><td><b>藥妝零食密封袋</b></td><td class="old">消耗品須特殊封裝</td><td class="new">取消，可自由整理行李</td></tr>
+      <tr><td><b>郵寄出境</b></td><td class="old" colspan="2">2025/3/31 已廢除——只能買本人出境時能帶走的量</td></tr>
+      <tr><td><b>高單價品</b></td><td class="old">—</td><td class="new">單價 100 萬日圓（未稅）以上，須登錄品牌、型號、序號</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 class="section-title">兩大地雷：白付 10% 消費稅的最常見原因</h2>
+  <div class="grid cols-2">
+    <div class="card soft-coral">
+      <h3>💣 地雷一：先託運，海關就看不到東西</h3>
+      <p>免稅品放進大行李箱交運後，海關無法事後開箱，等於失去「已攜出」的證據。</p>
+      <ul class="list coral" style="margin-top:8px">
+        <li>液體化妝品、酒類必須託運的 → <b>先到海關確認，再回長榮櫃檯交運</b></li>
+        <li>前一晚打包時，把免稅品放在行李箱最上層或獨立袋子</li>
+      </ul>
+    </div>
+    <div class="card soft-coral">
+      <h3>💣 地雷二：一張收據一項沒帶走，整張作廢</h3>
+      <p>海關以「單次結帳收據」整批判定。食品吃掉、東西送人或弄丟，同收據其他商品也全不能退。</p>
+      <ul class="list coral" style="margin-top:8px">
+        <li>要在日本當場用的東西，<b>請店員分開結帳</b>，或乾脆不辦免稅</li>
+        <li>帶娃特別注意：<b>尿布、濕紙巾、零食、玩具</b>最容易「當場拆」</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="section-title">本趟購物點的退稅做法</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>日</th><th>地點</th><th>可能會買</th><th>退稅建議</th></tr></thead>
+    <tbody>
+      <tr><td>D1</td><td>業務超市・便利商店</td><td>副食品、牛奶、水果、早餐</td><td><span class="badge green">不辦免稅</span> 都在日本吃掉</td></tr>
+      <tr><td>D3</td><td>阿美橫丁（松本清、OS Drug）</td><td>藥妝、保養品</td><td><span class="badge amber">分開結帳</span> 帶回台灣的辦免稅；這幾天要用的尿布、濕紙巾另一張收據</td></tr>
+      <tr><td>D3</td><td>ヤマシロヤ</td><td>玩具</td><td><span class="badge amber">分開結帳</span> 當場拆給女兒玩的另結</td></tr>
+      <tr><td>D5</td><td>GINZA SIX・銀座三越・東急プラザ</td><td>精品、美妝、服飾雜貨</td><td><span class="badge coral">主要退稅來源</span> 收據集中保管，結帳時問清楚退款方式</td></tr>
+      <tr><td>D5</td><td>UNIQLO TOKYO</td><td>幼兒服飾、發熱衣</td><td><span class="badge amber">分開結帳</span> 當天就要穿的另結</td></tr>
+      <tr><td>D5</td><td>伊東屋・教文館・博品館</td><td>文具、繪本、玩具</td><td>依店家是否為免稅店，帶回台灣的才辦</td></tr>
+      <tr><td>D2–D5</td><td>聖誕市集攤位</td><td>熱食、聖誕雜貨</td><td>攤位通常不是免稅店，以現場標示為準 <span style="color:var(--muted)">[推論]</span></td></tr>
+      <tr><td>D6</td><td>成田出境後免稅店</td><td>伴手禮</td><td>屬機場免稅店，與市區「先付後退」流程不同，以現場標示為準</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 class="section-title">出發前與購物時的準備</h2>
+  <div class="grid cols-3">
+    <div class="card soft-amber">
+      <h3>💳 資金</h3>
+      <ul class="list amber">
+        <li>信用卡額度多留 <b>含稅 10%</b>——稅金先付、事後才退</li>
+        <li>指定一張主刷卡，退款入帳時較好對帳</li>
+      </ul>
+    </div>
+    <div class="card soft-green">
+      <h3>🧾 收據</h3>
+      <ul class="list">
+        <li>一張收據的商品裝一袋，收據貼袋上</li>
+        <li>店家給的退款登記 QR Code 當場掃完</li>
+        <li>回台後追蹤退款入帳，未入帳找店家或退款業者</li>
+      </ul>
+    </div>
+    <div class="card soft-coral">
+      <h3>🧳 行李</h3>
+      <ul class="list coral">
+        <li>只買出境時能帶走的量（郵寄出境已廢除）</li>
+        <li>不必再處理藥妝密封袋，打包更自由</li>
+        <li>返程：<b>海關 → 託運 → 出境</b></li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="section-title">常見問題</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th style="width:34%">問題</th><th>答案</th></tr></thead>
+    <tbody>
+      <tr><td><b>10 月底前買、11 月後出境呢？</b></td><td>以購物日判定：10/31 前購物仍適用舊制。本趟全在 12 月，一律新制。</td></tr>
+      <tr><td><b>可以退現金嗎？</b></td><td>視店家與退款業者而定，官方以信用卡、電子支付、指定帳戶為主；結帳時直接問店員。</td></tr>
+      <tr><td><b>免稅品可以託運嗎？</b></td><td>可以，但要先到海關辦持出確認，再回航空公司櫃檯交運。</td></tr>
+      <tr><td><b>藥妝零食還要密封袋嗎？</b></td><td>不用。新制不再區分一般物品與消耗品，50 萬日圓消耗品上限也取消。</td></tr>
+      <tr><td><b>收據裡有一項吃掉了？</b></td><td>整張收據都不能退。當地要用的另開收據。</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="note">
+    <b>📚 資料來源：</b>經理人《2026 日本退稅新制懶人包》（2026/9/30，依日本觀光廳、國稅廳、財務省公告整理）。
+    官方：<a href="https://www.mlit.go.jp/kankocho/tax-free/page01_000001_00019.html" target="_blank" rel="noopener">日本觀光廳 消費稅免稅店</a>・
+    <a href="https://www.nta.go.jp/publication/pamph/shohi/menzei/201805/format/002.htm" target="_blank" rel="noopener">國稅廳 リファンド方式</a>。
+    出發前 2 週請再看一次官方公告。
   </div>
 </main>
 
@@ -1901,7 +2080,7 @@ ul.list.amber li::before{background:var(--amber);}
 
 <script>
 (function(){
-  var pages=["home","day1","day2","day3","day4","day5","day6","shopping","market","map"];
+  var pages=["home","day1","day2","day3","day4","day5","day6","shopping","taxfree","market","map"];
   var tabs=document.querySelectorAll(".tab");
   function show(id,push){
     if(pages.indexOf(id)<0)id="home";
@@ -1922,6 +2101,7 @@ ul.list.amber li::before{background:var(--amber);}
     b.addEventListener("click",function(){show(b.dataset.goto);});
   });
   window.addEventListener("popstate",function(){show(location.hash.replace("#","")||"home",false);});
+  window.addEventListener("hashchange",function(){show(location.hash.replace("#","")||"home",false);});
   show(location.hash.replace("#","")||"home",false);
 })();
 </script>
