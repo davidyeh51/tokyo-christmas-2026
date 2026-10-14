@@ -335,6 +335,25 @@ ul.list.amber li::before{background:var(--amber);}
 td.old{color:var(--muted);}
 td.new{font-weight:600;}
 
+.tab.kids-tab{color:#bfe8ff;}
+.tab.kids-tab.active{color:#1f6fa8;}
+.kids-hero{background:linear-gradient(135deg,#1b4f7a,#2f86b8);color:#fff;border-radius:16px;padding:24px 28px;margin-bottom:20px;}
+.kids-hero .label{font-size:.78rem;letter-spacing:.14em;opacity:.85;}
+.kids-hero h2{font-size:1.4rem;font-weight:800;margin:4px 0 6px;}
+.kids-hero p{font-size:.9rem;opacity:.92;}
+.floor-stack{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:14px 0;}
+.floor{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:stretch;margin-bottom:6px;}
+.floor:last-child{margin-bottom:0;}
+.fl{display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;color:var(--deep);background:#eef2f1;border-radius:8px;}
+.fb{border-radius:8px;padding:9px 14px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;border-left:5px solid;}
+.fb b{font-size:.92rem;}
+.fb span{font-size:.78rem;color:var(--muted);}
+.fb.food{background:var(--coral-soft);border-color:var(--coral);}
+.fb.sight{background:var(--green-soft);border-color:var(--green);}
+.fb.market{background:var(--amber-soft);border-color:#c07d16;}
+.fb.kid{background:#e3f1fa;border-color:#2f86b8;}
+.fb.base{background:#f1f5f3;border-color:#93a5a9;}
+
 /* ===== Market timing chart ===== */
 .mkt-chart{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px 14px;margin:14px 0;}
 .mkt-row{display:grid;grid-template-columns:140px 1fr;gap:12px;align-items:center;margin-bottom:9px;}
@@ -414,6 +433,7 @@ td.new{font-weight:600;}
       <button class="tab" data-page="day5">Day 5<span class="sub">12/17 銀座・六本木</span></button>
       <button class="tab" data-page="day6">Day 6<span class="sub">12/18 返程</span></button>
       <button class="tab shop-tab" data-page="shopping">🛍️ 媽媽購物<span class="sub">Ginza Shopping</span></button>
+      <button class="tab kids-tab" data-page="kids">🧸 寗寗購物<span class="sub">Toy Story × Totoro</span></button>
       <button class="tab tax-tab" data-page="taxfree">💴 退稅攻略<span class="sub">Tax-free 新制</span></button>
       <button class="tab market-tab" data-page="market">🎄 市集攻略<span class="sub">Christmas Markets</span></button>
       <button class="tab map-tab" data-page="map">🗺️ 行程地圖<span class="sub">Google My Maps</span></button>
@@ -489,7 +509,7 @@ td.new{font-weight:600;}
 
         <circle cx="713" cy="135" r="9" fill="#fff" stroke="#177f8f" stroke-width="3.5"/>
         <text x="713" y="162" font-size="14" font-weight="700" fill="#10252c" text-anchor="middle">晴空塔・押上</text>
-        <text x="713" y="178" font-size="11.5" fill="#177f8f" text-anchor="middle">Day 2 🎄</text>
+        <text x="713" y="178" font-size="11.5" fill="#177f8f" text-anchor="middle">Day 2 🎄🧸</text>
 
         <circle cx="146" cy="366" r="9" fill="#fff" stroke="#0f8f70" stroke-width="3.5"/>
         <text x="146" y="393" font-size="14" font-weight="700" fill="#10252c" text-anchor="middle">神宮外苑</text>
@@ -542,7 +562,7 @@ td.new{font-weight:600;}
     <button class="day-card" data-goto="day2">
       <div class="d-date">DAY 2｜12/14（一）</div>
       <div class="d-title">⛩️ 淺草寺 × 墨田水族館</div>
-      <div class="d-desc">早晨人少時逛淺草寺，午休後到晴空塔水族館，室內恆溫適合幼兒。</div>
+      <div class="d-desc">早晨人少時逛淺草寺，午休後到晴空塔水族館，接著同棟幫寗寗買玩具總動員與龍貓。</div>
       <div class="d-night">🎄 晴空塔市集＋點燈｜🍽️ 迴轉壽司トリトン</div>
     </button>
     <button class="day-card" data-goto="day3">
@@ -807,15 +827,16 @@ td.new{font-weight:600;}
 <!-- ============ Day 2 ============ -->
 <main class="page" id="page-day2">
   <div class="eyebrow">Day 2｜12/14（一）</div>
-  <h1 class="page-title">淺草 × 晴空塔：早晨逛寺、午後水族館、傍晚市集點燈</h1>
+  <h1 class="page-title">淺草 × 晴空塔：早晨逛寺、午後水族館與寗寗買玩具、傍晚市集點燈</h1>
   <p class="page-lede">上野動物園週一休園，故本日安排淺草晴空塔線。全程室內比例高，適合 12 月天氣。</p>
 
   <div class="timeline">
-    <div class="tl-cap">📊 當日時間分配　·　下午到晚上全在晴空塔同一棟</div>
+    <div class="tl-cap">📊 當日時間分配　·　下午到晚上全在晴空塔同一棟，玩具也在這裡買</div>
     <div class="tl-track">
       <div class="tl-block" style="left:8.33%;width:12.5%;background:#0f8f70">淺草寺</div>
       <div class="tl-block" style="left:25%;width:20.83%;background:#93a5a9">午餐 · 午休</div>
-      <div class="tl-block" style="left:50%;width:16.67%;background:#0f8f70">墨田水族館</div>
+      <div class="tl-block" style="left:50%;width:14.58%;background:#0f8f70">墨田水族館</div>
+      <div class="tl-block" style="left:64.58%;width:6.25%;background:#2f86b8">🧸</div>
       <div class="tl-block" style="left:70.83%;width:12.5%;background:#c07d16">🎄 市集</div>
       <div class="tl-block" style="left:83.33%;width:12.5%;background:#e25f48">トリトン</div>
     </div>
@@ -829,6 +850,7 @@ td.new{font-weight:600;}
     <div class="tl-legend">
       <span><i style="background:#0f8f70"></i>景點</span>
       <span><i style="background:#93a5a9"></i>休息</span>
+      <span><i style="background:#2f86b8"></i>寗寗購物</span>
       <span><i style="background:#c07d16"></i>市集·點燈</span>
       <span><i style="background:#e25f48"></i>餐飲</span>
     </div>
@@ -841,7 +863,7 @@ td.new{font-weight:600;}
     <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">淺草</div><div class="rc-time">09:00</div></div>
     <div class="rc-link"><div class="rc-bar" style="background:#e85298"></div><div class="rc-line" style="color:#d13f82">都營淺草線</div><div class="rc-dur">1 站｜或步行 15 分</div></div>
     <div class="rc-node"><div class="rc-dot hl"></div><div class="rc-name">押上<br>晴空塔</div><div class="rc-time">14:00</div></div>
-    <div class="rc-link"><div class="rc-bar" style="background:#93a5a9"></div><div class="rc-line" style="color:#5e6f73">同棟垂直移動</div><div class="rc-dur">水族館→市集→晚餐</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#93a5a9"></div><div class="rc-line" style="color:#5e6f73">同棟垂直移動</div><div class="rc-dur">水族館→寗寗購物→市集→晚餐</div></div>
     <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">返回<br>上野</div><div class="rc-time">19:30</div></div>
   </div>
 
@@ -851,8 +873,11 @@ td.new{font-weight:600;}
       <tr><td class="time">09:00–10:30</td><td><b>淺草寺＋仲見世通</b></td><td>推車 ✓／早晨人少／雷門拍全家福</td>
         <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%B5%85%E8%8D%89%E5%AF%BA">地圖</a></td></tr>
       <tr><td class="time">11:00–13:30</td><td><b>午餐＋午休</b></td><td>淺草簡食或回飯店（銀座線直達 5 分鐘）</td><td>—</td></tr>
-      <tr><td class="time">14:00–16:00</td><td><b>墨田水族館</b>（晴空塔 5–6F）</td><td>推車 ✓／哺乳室 ✓（Solamachi 內）／室內恆溫</td>
+      <tr><td class="time">14:00–15:45</td><td><b>墨田水族館</b>（晴空塔 5–6F）</td><td>推車 ✓／哺乳室 ✓（Solamachi 內）／室內恆溫</td>
         <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%99%E3%81%BF%E3%81%A0%E6%B0%B4%E6%97%8F%E9%A4%A8">地圖</a></td></tr>
+      <tr style="background:#eef6fb"><td class="time">15:45–16:30</td><td>🧸 <b>寗寗購物</b>：2F 橡子共和國（龍貓）→ 3F Disney Store（玩具總動員）<br><a href="#kids">→ 看寗寗購物攻略</a></td><td>同棟上下樓／推車 ✓／戰利品放推車籃</td>
+        <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%A9%E3%82%93%E3%81%90%E3%82%8A%E5%85%B1%E5%92%8C%E5%9B%BD%20%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC%E3%82%BF%E3%82%A6%E3%83%B3%E5%BA%97">龍貓</a>
+            <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC%E3%82%B9%E3%83%88%E3%82%A2%20%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC%E3%82%BF%E3%82%A6%E3%83%B3%E3%83%BB%E3%82%BD%E3%83%A9%E3%83%9E%E3%83%81%E5%BA%97">Disney</a></td></tr>
       <tr><td class="time">16:30–18:00</td><td>🎄 <b>晴空塔聖誕市集＋點燈</b></td><td>Sky Arena 4F／17:30 塔身聖誕點燈</td>
         <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC%E3%82%BF%E3%82%A6%E3%83%B3">地圖</a></td></tr>
       <tr><td class="time">18:00</td><td>🍽️ <b>晚餐：迴轉壽司トリトン</b>（Solamachi 6F）</td><td>北海道人氣迴轉壽司，兒童椅 ✓</td>
@@ -1489,6 +1514,112 @@ td.new{font-weight:600;}
   </div>
 </main>
 
+<!-- ============ 寗寗購物 ============ -->
+<main class="page" id="page-kids">
+  <div class="kids-hero">
+    <div class="label">NING-NING'S TOY MISSION　·　Day 2｜12/14（一）15:45–16:30</div>
+    <h2>🧸 寗寗的玩具任務：玩具總動員＋龍貓，排在 Day 2 晴空塔一棟買齊</h2>
+    <p>Day 2 下午本來就在晴空塔 Solamachi，兩間店就在同一棟（2F 與 3F）——不用加任何車程，只從水族館挪出 45 分鐘。</p>
+  </div>
+
+  <div class="metric-row">
+    <div class="metric green"><div class="m-label">額外車程</div><div class="m-value">0 分</div><div class="m-note">本來就在同一棟</div></div>
+    <div class="metric teal"><div class="m-label">兩店距離</div><div class="m-value">同棟</div><div class="m-note">2F East Yard ↔ 3F Tower Yard</div></div>
+    <div class="metric amber"><div class="m-label">購物時段</div><div class="m-value">45 分</div><div class="m-note">水族館看完、市集開始前</div></div>
+    <div class="metric coral"><div class="m-label">犧牲的行程</div><div class="m-value">15 分</div><div class="m-note">水族館 2 小時 → 1 小時 45 分</div></div>
+  </div>
+
+  <h2 class="section-title">為什麼選 Day 2 晴空塔：五個候選點逐一對照行程</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>候選據點</th><th>兩店距離</th><th>對本趟要加的交通</th><th>塞得進現有行程嗎</th><th>推車</th><th>結論</th></tr></thead>
+    <tbody>
+      <tr style="background:#f0f8f4"><td><b>晴空塔 Solamachi</b></td><td>同棟 2F／3F</td><td><b>0</b>：Day 2 14:00–19:30 本來就在這</td><td>✅ 只需挪 45 分</td><td>★★★★★</td><td><span class="badge green">採用</span></td></tr>
+      <tr><td>池袋 Sunshine City</td><td>同棟同層 B1</td><td>上野→池袋往返約 1 小時 <span style="color:var(--muted)">[推論]</span></td><td>❌ 六天沒有空檔，要砍一個景點</td><td>★★★★☆</td><td><span class="badge amber">備案</span></td></tr>
+      <tr><td>台場 AQUA CiTY＋DiverCity</td><td>相鄰商場，空橋 5 分</td><td>百合海鷗號，半天起跳</td><td>❌</td><td>★★★★★</td><td><span class="badge coral">不採用</span></td></tr>
+      <tr><td>迪士尼旗艦店（新宿）</td><td>只有迪士尼</td><td>要專程跑一趟</td><td>❌ 且店內無哺乳室</td><td>—</td><td><span class="badge coral">不採用</span></td></tr>
+      <tr><td>東京車站一番街</td><td>只有橡子共和國，沒有 Disney Store</td><td>Day 4 本來就在東京站</td><td>⚠️ 人潮擠、走道窄</td><td>★★☆☆☆</td><td><span class="badge amber">龍貓補買</span></td></tr>
+    </tbody>
+  </table></div>
+  <div class="note tip"><b>💡 判斷依據：</b>五個點裡只有晴空塔同時滿足「兩店同棟」與「本來就在行程上」。池袋同層更近，但要從六天裡挖出半天，代價大於好處。</div>
+
+  <h2 class="section-title">Solamachi 樓層動線：一次下到 2F，之後一路往上</h2>
+  <div class="floor-stack">
+    <div class="floor"><div class="fl">6F</div><div class="fb food"><b>🍽️ 迴轉壽司トリトン</b><span>⑤ 18:00 晚餐（17:15 先派一人取號）</span></div></div>
+    <div class="floor"><div class="fl">5F</div><div class="fb sight"><b>🐧 墨田水族館</b><span>① 14:00–15:45　出館後搭電梯直下 2F</span></div></div>
+    <div class="floor"><div class="fl">4F</div><div class="fb market"><b>🎄 晴空塔聖誕市集（Sky Arena）</b><span>④ 16:30–18:00　17:30 塔身點燈</span></div></div>
+    <div class="floor"><div class="fl">3F</div><div class="fb kid"><b>🧸 Disney Store（Tower Yard）</b><span>③ 16:10–16:30　玩具總動員</span></div></div>
+    <div class="floor"><div class="fl">2F</div><div class="fb kid"><b>🌳 橡子共和國（East Yard）</b><span>② 15:45–16:10　龍貓・門口有大龍貓與貓巴士可合照</span></div></div>
+    <div class="floor"><div class="fl">B</div><div class="fb base"><b>🚇 押上站</b><span>半藏門線・都營淺草線，地下直結</span></div></div>
+  </div>
+  <p style="font-size:.78rem;color:var(--muted);margin-top:-4px">2F／3F 店鋪位置依參考資料；水族館、市集、トリトン樓層依原行程。East Yard 與 Tower Yard 是同一商場的不同區，需要水平走一段。</p>
+
+  <div class="route-chain">
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">5F<br>水族館</div><div class="rc-time">15:45</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#93a5a9"></div><div class="rc-line" style="color:#5e6f73">電梯直下</div><div class="rc-dur">5F → 2F</div></div>
+    <div class="rc-node"><div class="rc-dot hl"></div><div class="rc-name">2F<br>橡子共和國</div><div class="rc-time">15:45</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#93a5a9"></div><div class="rc-line" style="color:#5e6f73">上一層</div><div class="rc-dur">East → Tower Yard</div></div>
+    <div class="rc-node"><div class="rc-dot hl"></div><div class="rc-name">3F<br>Disney</div><div class="rc-time">16:10</div></div>
+    <div class="rc-link"><div class="rc-bar" style="background:#93a5a9"></div><div class="rc-line" style="color:#5e6f73">上一層</div><div class="rc-dur">戰利品放推車籃</div></div>
+    <div class="rc-node"><div class="rc-dot"></div><div class="rc-name">4F<br>市集</div><div class="rc-time">16:30</div></div>
+  </div>
+
+  <h2 class="section-title">兩間店與採購清單</h2>
+  <div class="grid cols-2">
+    <div class="card soft-green">
+      <h3>🌳 橡子共和國 晴空塔店（どんぐり共和国）</h3>
+      <p>晴空街道 East Yard 2F。店面寬敞，門口有巨大龍貓與貓巴士，是全家合照點。</p>
+      <ul class="list" style="margin-top:8px">
+        <li>吉卜力嬰幼兒周邊：<b>龍貓圍兜、毛巾、餐具、手指玩偶</b></li>
+        <li>圍兜、餐具實用又安全，比小公仔更適合 22 個月</li>
+      </ul>
+      <p style="margin-top:8px"><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%A9%E3%82%93%E3%81%90%E3%82%8A%E5%85%B1%E5%92%8C%E5%9B%BD%20%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC%E3%82%BF%E3%82%A6%E3%83%B3%E5%BA%97">地圖</a></p>
+    </div>
+    <div class="card soft-coral">
+      <h3>🧸 Disney Store 東京晴空塔街道店</h3>
+      <p>晴空街道 Tower Yard 3F。「想像公園」主題，走道寬、推車好推。</p>
+      <ul class="list coral" style="margin-top:8px">
+        <li>皮克斯<b>《玩具總動員》玩具與生活雜貨</b>齊全</li>
+        <li>胡迪、巴斯光年等布偶類最適合幼兒抱</li>
+      </ul>
+      <p style="margin-top:8px"><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC%E3%82%B9%E3%83%88%E3%82%A2%20%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC%E3%82%BF%E3%82%A6%E3%83%B3%E3%83%BB%E3%82%BD%E3%83%A9%E3%83%9E%E3%83%81%E5%BA%97">地圖</a></p>
+    </div>
+  </div>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>挑選原則</th><th>為什麼</th><th>怎麼做</th></tr></thead>
+    <tbody>
+      <tr><td><b>看包裝「対象年齢」</b></td><td>小零件公仔常標 3 歲以上，22 個月還會把東西放進嘴裡</td><td>優先布偶、圍兜、餐具、大型軟質玩具</td></tr>
+      <tr><td><b>當場拆的分開結帳</b></td><td>退稅新制以「一張收據」判定，一項沒帶出境整張不退</td><td>要馬上給寗寗玩的另結，或不辦免稅（見 <a href="#taxfree">💴 退稅攻略</a>）</td></tr>
+      <tr><td><b>控制體積</b></td><td>郵寄出境已廢除，只能自己帶回</td><td>大型布偶先想好放哪個行李箱</td></tr>
+      <tr><td><b>先逛龍貓、再逛迪士尼</b></td><td>動線一次下到 2F 再往上，不走回頭路</td><td>戰利品放推車下籃，4F 市集不用再提袋</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 class="section-title">Day 2 行程調整前後對照</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>時段</th><th>原本</th><th>調整後</th></tr></thead>
+    <tbody>
+      <tr><td class="time">14:00–15:45</td><td class="old">墨田水族館（到 16:00）</td><td class="new">墨田水族館，提早 15 分出館</td></tr>
+      <tr style="background:#f0f8f4"><td class="time">15:45–16:30</td><td class="old">（空檔＋移動）</td><td class="new">🧸 <b>寗寗購物</b>：2F 橡子共和國 → 3F Disney Store</td></tr>
+      <tr><td class="time">16:30–18:00</td><td class="old">晴空塔聖誕市集＋點燈</td><td class="new">不變</td></tr>
+      <tr><td class="time">18:00</td><td class="old">トリトン晚餐</td><td class="new">不變（17:15 派一人去 6F 取號）</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note tip"><b>💡 為什麼插在水族館後、市集前：</b>這時寗寗剛看完魚還有精神；放在晚餐後（19:30）她已經玩了一整天，容易哭鬧。缺點是要推著戰利品逛市集——推車下籃剛好能放。</div>
+
+  <h2 class="section-title">沒買到或還想買：備案</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>情況</th><th>備案</th><th>代價</th></tr></thead>
+    <tbody>
+      <tr><td>龍貓想多買／缺貨</td><td>Day 4 東京站一番街「橡子共和國」（行程本來就在東京站）</td><td>人擠、走道窄，建議一人去、另一人帶寗寗在 KITTE</td></tr>
+      <tr><td>玩具總動員想多買</td><td>Day 5 爸爸女兒路線的<b>博品館 TOY PARK</b>（是否有該系列 <span style="color:var(--muted)">[未驗證]</span>）</td><td>無，原本就排在行程上</td></tr>
+      <tr><td>兩樣都缺貨、非買不可</td><td>池袋 Sunshine City Alpa B1（兩店同層）</td><td>要挪掉半天行程，不建議</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="note warn"><b>⚠️ 出發前確認：</b>兩店 12/14（一）營業時間、是否為免稅店、晴空街道 Baby Room 位置（參考資料指每層皆有）。來源為網路整理資料，店鋪樓層以官網為準。</div>
+</main>
+
 <!-- ============ 退稅攻略 ============ -->
 <main class="page" id="page-taxfree">
   <div class="tax-hero">
@@ -1887,11 +2018,11 @@ td.new{font-weight:600;}
   <div class="map-hero">
     <div class="label">GOOGLE MY MAPS</div>
     <h2>🗺️ 全行程地圖：依日期分圖層，一次看完六天所有地點</h2>
-    <p>下載 KML 檔匯入 Google My Maps，就能在手機 Google 地圖離線查看全部 40 個地點，並依日期開關圖層。</p>
+    <p>下載 KML 檔匯入 Google My Maps，就能在手機 Google 地圖離線查看全部 42 個地點，並依日期開關圖層。</p>
   </div>
 
   <div class="metric-row">
-    <div class="metric teal"><div class="m-label">地圖標記點</div><div class="m-value">40 個</div><div class="m-note">含說明與時間</div></div>
+    <div class="metric teal"><div class="m-label">地圖標記點</div><div class="m-value">42 個</div><div class="m-note">含說明與時間</div></div>
     <div class="metric green"><div class="m-label">圖層數</div><div class="m-value">8 層</div><div class="m-note">可依日期開關</div></div>
     <div class="metric amber"><div class="m-label">電車段數</div><div class="m-value">14 段</div><div class="m-note">含步行接駁</div></div>
     <div class="metric coral"><div class="m-label">需轉乘的段</div><div class="m-value">僅 2 段</div><div class="m-note">其餘皆一線直達</div></div>
@@ -1941,7 +2072,7 @@ td.new{font-weight:600;}
 
         <circle cx="713" cy="135" r="9" fill="#fff" stroke="#177f8f" stroke-width="3.5"/>
         <text x="713" y="162" font-size="14" font-weight="700" fill="#10252c" text-anchor="middle">晴空塔・押上</text>
-        <text x="713" y="178" font-size="11.5" fill="#177f8f" text-anchor="middle">Day 2 🎄</text>
+        <text x="713" y="178" font-size="11.5" fill="#177f8f" text-anchor="middle">Day 2 🎄🧸</text>
 
         <circle cx="146" cy="366" r="9" fill="#fff" stroke="#0f8f70" stroke-width="3.5"/>
         <text x="146" y="393" font-size="14" font-weight="700" fill="#10252c" text-anchor="middle">神宮外苑</text>
@@ -2040,7 +2171,7 @@ td.new{font-weight:600;}
     <tbody>
       <tr><td><b>🏨 基地｜住宿與車站</b></td><td>4</td><td>&amp;Here TOKYO UENO、京成上野站、JR 上野站、成田 T1</td></tr>
       <tr><td><b>Day 1｜12/13 抵達日</b></td><td>5</td><td>成田抵達 → 入住 → 業務超市 → 上野公園 → 黑船亭</td></tr>
-      <tr><td><b>Day 2｜12/14 淺草・晴空塔</b></td><td>4</td><td>淺草寺 → 墨田水族館 → 晴空塔市集 → トリトン</td></tr>
+      <tr><td><b>Day 2｜12/14 淺草・晴空塔</b></td><td>6</td><td>淺草寺 → 墨田水族館 → 橡子共和國 → Disney Store → 晴空塔市集 → トリトン</td></tr>
       <tr><td><b>Day 3｜12/15 上野・神宮外苑</b></td><td>6</td><td>動物園 → 敘敘苑 → 阿美橫丁 → ヤマシロヤ → 神宮外苑市集</td></tr>
       <tr><td><b>Day 4｜12/16 丸之內・芝公園</b></td><td>7</td><td>KITTE → 根室花まる → Café 1894 → 仲通燈海 → 芝公園市集＋鐵塔（含日比谷備案）</td></tr>
       <tr><td><b>Day 5｜12/17 銀座・六本木</b></td><td>10</td><td>媽媽路線（GINZA SIX／三越／東急／UNIQLO／伊東屋）＋爸爸路線（博品館／教文館）＋煉瓦亭＋六本木燈海市集</td></tr>
@@ -2080,7 +2211,7 @@ td.new{font-weight:600;}
 
 <script>
 (function(){
-  var pages=["home","day1","day2","day3","day4","day5","day6","shopping","taxfree","market","map"];
+  var pages=["home","day1","day2","day3","day4","day5","day6","shopping","kids","taxfree","market","map"];
   var tabs=document.querySelectorAll(".tab");
   function show(id,push){
     if(pages.indexOf(id)<0)id="home";

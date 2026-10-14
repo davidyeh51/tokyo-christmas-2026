@@ -52,13 +52,19 @@
     <Placemark><name>①  淺草寺 + 仲見世通（09:00-10:30）</name><styleUrl>#sight</styleUrl>
       <description>推車 OK，早晨人少，雷門拍全家福。上野搭銀座線 5 分鐘直達。</description>
       <Point><coordinates>139.7967,35.7148,0</coordinates></Point></Placemark>
-    <Placemark><name>②  墨田水族館（14:00-16:00）</name><styleUrl>#sight</styleUrl>
+    <Placemark><name>②  墨田水族館（14:00-15:45）</name><styleUrl>#sight</styleUrl>
       <description>晴空塔 5-6F。推車 OK／哺乳室在 Solamachi 內／室內恆溫。</description>
       <Point><coordinates>139.8110,35.7100,0</coordinates></Point></Placemark>
-    <Placemark><name>③ 🎄 晴空塔聖誕市集（16:30-18:00）</name><styleUrl>#market</styleUrl>
+    <Placemark><name>③ 🧸 橡子共和國 晴空塔店（15:45-16:10 寗寗購物）</name><styleUrl>#shop</styleUrl>
+      <description>龍貓／吉卜力官方店，晴空街道 East Yard 2F。門口有大龍貓與貓巴士可合照；嬰幼兒周邊：圍兜、毛巾、餐具、手指玩偶。當場拆的分開結帳（退稅新制）。</description>
+      <Point><coordinates>139.8122,35.7103,0</coordinates></Point></Placemark>
+    <Placemark><name>④ 🧸 Disney Store 東京晴空塔街道店（16:10-16:30 寗寗購物）</name><styleUrl>#shop</styleUrl>
+      <description>玩具總動員，晴空街道 Tower Yard 3F。走道寬、推車好推。選布偶類，避開標 3 歲以上的小零件公仔。</description>
+      <Point><coordinates>139.8100,35.7099,0</coordinates></Point></Placemark>
+    <Placemark><name>⑤ 🎄 晴空塔聖誕市集（16:30-18:00）</name><styleUrl>#market</styleUrl>
       <description>Sky Arena 4F。17:30 塔身聖誕限定點燈。木屋攤位賣熱紅酒、德式香腸。⚠️ 出發前確認 2026 檔期。</description>
       <Point><coordinates>139.8107,35.7101,0</coordinates></Point></Placemark>
-    <Placemark><name>④ 🍽️ 迴轉壽司トリトン（18:00 晚餐）</name><styleUrl>#food</styleUrl>
+    <Placemark><name>⑥ 🍽️ 迴轉壽司トリトン（18:00 晚餐）</name><styleUrl>#food</styleUrl>
       <description>Solamachi 6F。北海道人氣迴轉壽司約 4.2★，兒童椅 OK。排隊名店，建議 17:30 前取號。</description>
       <Point><coordinates>139.8107,35.7101,0</coordinates></Point></Placemark>
   </Folder>
