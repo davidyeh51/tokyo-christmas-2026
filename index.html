@@ -335,6 +335,12 @@ ul.list.amber li::before{background:var(--amber);}
 td.old{color:var(--muted);}
 td.new{font-weight:600;}
 
+.tab.suica-tab{color:#b9f5c8;}
+.tab.suica-tab.active{color:#2a8a3e;}
+.suica-hero{background:linear-gradient(135deg,#1f6b30,#3aa556);color:#fff;border-radius:16px;padding:24px 28px;margin-bottom:20px;}
+.suica-hero .label{font-size:.78rem;letter-spacing:.14em;opacity:.85;}
+.suica-hero h2{font-size:1.4rem;font-weight:800;margin:4px 0 6px;}
+.suica-hero p{font-size:.9rem;opacity:.92;}
 .tab.kids-tab{color:#bfe8ff;}
 .tab.kids-tab.active{color:#1f6fa8;}
 .kids-hero{background:linear-gradient(135deg,#1b4f7a,#2f86b8);color:#fff;border-radius:16px;padding:24px 28px;margin-bottom:20px;}
@@ -435,6 +441,7 @@ td.new{font-weight:600;}
       <button class="tab shop-tab" data-page="shopping">🛍️ 媽媽購物<span class="sub">Ginza Shopping</span></button>
       <button class="tab kids-tab" data-page="kids">🧸 寗寗購物<span class="sub">Toy Story × Totoro</span></button>
       <button class="tab tax-tab" data-page="taxfree">💴 退稅攻略<span class="sub">Tax-free 新制</span></button>
+      <button class="tab suica-tab" data-page="suica">📱 Suica 手機<span class="sub">Suica × Phone</span></button>
       <button class="tab market-tab" data-page="market">🎄 市集攻略<span class="sub">Christmas Markets</span></button>
       <button class="tab map-tab" data-page="map">🗺️ 行程地圖<span class="sub">Google My Maps</span></button>
     </nav>
@@ -698,6 +705,7 @@ td.new{font-weight:600;}
     <div class="check-item"><div class="cb"></div><div><b>Café 1894：11/16 凌晨 00:00 官網搶訂 12/16 下午茶</b>（開放後數小時內訂完）</div></div>
     <div class="check-item"><div class="cb"></div><div>神宮外苑東京聖誕市集：官網購買 12/15 入場券（11/19 開賣）</div></div>
     <div class="check-item"><div class="cb"></div><div>Skyliner：提前購買電子票（去回程）</div></div>
+    <div class="check-item"><div class="cb"></div><div><b>Suica</b>：媽媽 iPhone 錢包先加 Suica 儲 ¥5,000；爸爸 Fold 不支援，Day 1 在 JR 上野站買實體卡（只收現金，見 📱 Suica 手機）</div></div>
     <div class="check-item"><div class="cb"></div><div>機場特約停車場：預約 12/13 清晨進場</div></div>
     <div class="check-item"><div class="cb"></div><div>Visit Japan Web：入境資料預先填寫；入境後再產生<b>免稅 QR Code</b>（購物與機場確認用）</div></div>
     <div class="check-item"><div class="cb"></div><div><b>Valextra 來店予約</b>：官網預約 12/17（四）13:30 銀座三越 1F，先指定款式／顏色請店家留貨（見 🛍️ 媽媽購物）</div></div>
@@ -804,7 +812,7 @@ td.new{font-weight:600;}
         <td><a class="map-btn route walk" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%BA%AC%E6%88%90%E4%B8%8A%E9%87%8E%E9%A7%85&amp;destination=%26Here%20TOKYO%20UENO&amp;travelmode=walking">步行</a></td></tr>
       <tr><td class="time">14:00</td><td><b>辦理入住</b></td><td>確認嬰兒床已備妥</td>
         <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%26Here%20TOKYO%20UENO">地圖</a></td></tr>
-      <tr><td class="time">15:00–16:30</td><td><b>業務超市＋便利商店採購</b></td><td>副食品、牛奶、水果、隔日早餐</td>
+      <tr><td class="time">15:00–16:30</td><td><b>業務超市＋便利商店採購</b></td><td>副食品、牛奶、水果、隔日早餐；<b>爸爸順路到 JR 上野站買實體 Suica</b>（現金）</td>
         <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%A5%AD%E5%8B%99%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%20%E4%B8%8A%E9%87%8E">地圖</a></td></tr>
       <tr><td class="time">17:00</td><td><b>上野恩賜公園輕散步</b>（視體力）</td><td>不排正式景點，讓孩子適應環境</td>
         <td><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%8A%E9%87%8E%E6%81%A9%E8%B3%9C%E5%85%AC%E5%9C%92">地圖</a></td></tr>
@@ -1871,6 +1879,133 @@ td.new{font-weight:600;}
   </div>
 </main>
 
+<!-- ============ Suica 手機 ============ -->
+<main class="page" id="page-suica">
+  <div class="suica-hero">
+    <div class="label">SUICA × PHONE　·　爸爸 Galaxy Z Fold 8／媽媽 iPhone 17</div>
+    <h2>📱 Suica：媽媽用 iPhone 錢包，爸爸買實體卡，寗寗免費</h2>
+    <p>能不能把 Suica 放進手機，要看手機有沒有日本規格的 FeliCa 晶片，跟手機貴不貴無關。iPhone 全球版都有；台灣買的 Galaxy 沒有，這趟爸爸只能用實體卡。</p>
+  </div>
+
+  <div class="metric-row">
+    <div class="metric green"><div class="m-label">👩 媽媽 iPhone 17</div><div class="m-value">可以</div><div class="m-note">錢包 App 加 Suica，出發前就辦好</div></div>
+    <div class="metric coral"><div class="m-label">👨 爸爸 Z Fold 8</div><div class="m-value">不行</div><div class="m-note">台灣版沒有 FeliCa → 買實體卡</div></div>
+    <div class="metric teal"><div class="m-label">👧 寗寗 22 個月</div><div class="m-value">免費</div><div class="m-note">未滿 6 歲由大人陪同，不用卡</div></div>
+    <div class="metric amber"><div class="m-label">每張餘額上限</div><div class="m-value">¥20,000</div><div class="m-note">一人一張，同一趟車不能共用</div></div>
+  </div>
+
+  <h2 class="section-title">為什麼 iPhone 可以、Galaxy 不行：差在晶片，不是設定</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>手機</th><th>感應規格</th><th>手機版 Suica</th><th>本趟做法</th></tr></thead>
+    <tbody>
+      <tr style="background:#f0f8f4"><td><b>iPhone 17</b>（媽媽）</td><td>iPhone 8 起全球版都內建 FeliCa（Type-F）</td><td>✅ 錢包 App 直接加</td><td><span class="badge green">手機版</span></td></tr>
+      <tr><td><b>Galaxy Z Fold 8 台灣版</b>（爸爸）</td><td>只有國際通用的 Type-A／B，<b>不能靠更新或設定切換</b></td><td>❌ 目前不支援</td><td><span class="badge coral">實體卡</span></td></tr>
+      <tr><td>三星海外版的未來計畫</td><td>2026/4/21 三星與 JR 東日本宣布合作</td><td>目標 <b>2027 上半年</b>支援 Welcome Suica Mobile，機型未公布</td><td>這趟用不到</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note warn"><b>⚠️ 不要刷機：</b>網路上「刷日版韌體開 FeliCa」的做法要解鎖 Bootloader、取得 Root，可能讓手機無法開機、失去保固，也不保證能用。為一趟旅行不值得。</div>
+
+  <h2 class="section-title">兩人分工：誰、用什麼卡、什麼時候辦</h2>
+  <div class="grid cols-2">
+    <div class="card soft-green">
+      <h3>👩 媽媽：iPhone 錢包裡的 Suica</h3>
+      <ul class="list" style="margin-top:6px">
+        <li><b>出發前在台灣就辦好</b>：錢包 App →「＋」→ 交通卡 → Suica → 輸入金額，用 Apple Pay 裡的信用卡付款</li>
+        <li>建議先儲 <b>¥5,000</b>；不夠時在閘門前直接用手機加值，不用排隊</li>
+        <li>設成<b>快速交通卡</b>：不用解鎖、不用開 App，靠近閘門就過</li>
+        <li>沒電自動關機時，部分 iPhone 仍可感應（手動關機就不行），行動電源照樣要帶</li>
+        <li>沒用完的餘額可以<b>留到下次去日本</b>（最後使用起 10 年有效）；退款只能匯到日本銀行帳戶</li>
+      </ul>
+    </div>
+    <div class="card soft-coral">
+      <h3>👨 爸爸：實體 Suica（無記名）</h3>
+      <ul class="list coral" style="margin-top:6px">
+        <li>台灣沒有官方通路，<b>到日本才能買</b></li>
+        <li>Day 1 下午去業務超市時，順路在 <b>JR 上野站多功能售票機</b>買；不要在成田趕 Skyliner 時買</li>
+        <li>選 <b>¥3,000</b>（含押金 ¥500，可用 ¥2,500）；<b>只收日圓現金</b></li>
+        <li>加值也只能用現金：車站售票機、精算機、便利商店櫃檯或部分 ATM</li>
+        <li><b>不要夾在 Fold 的手機殼裡</b>，手機的 NFC 會干擾讀卡；也別跟悠遊卡疊在一起</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="section-title">爸爸選哪種實體卡：一般 Suica 勝過 Welcome Suica</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>項目</th><th>一般 Suica（無記名）</th><th>Welcome Suica（紅色）</th></tr></thead>
+    <tbody>
+      <tr><td>押金</td><td>¥500，退卡拿回</td><td>不用押金</td></tr>
+      <tr><td>有效期限</td><td>最後使用起 <b>10 年</b></td><td>28 天</td></tr>
+      <tr><td>沒用完的餘額</td><td>下次去日本繼續用，或退卡（扣 ¥220 手續費）</td><td><b>不退</b>，過期就沒了</td></tr>
+      <tr><td>哪裡買</td><td>JR 東日本各站多功能售票機、綠色窗口</td><td>機場與特定車站</td></tr>
+      <tr style="background:#f0f8f4"><td><b>結論</b></td><td><span class="badge green">採用</span> 以後還會去日本，卡留著</td><td>只來一次才划算</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 class="section-title">怎麼用：進站、出站、買東西</h2>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="no">1</div>
+      <div class="where">進站</div>
+      <h3>輕觸閘門感應區</h3>
+      <p>手機或卡片貼一下就好，不用先查票價。推車走<b>寬閘門</b>，寗寗不用刷。</p>
+    </div>
+    <div class="flow-step">
+      <div class="no">2</div>
+      <div class="where">出站</div>
+      <h3>再感應一次，自動扣款</h3>
+      <p>閘門會顯示餘額。一人一張，<b>同一趟車不能兩人輪流刷同一張</b>。</p>
+    </div>
+    <div class="flow-step hot">
+      <div class="no">!</div>
+      <div class="where">餘額不足</div>
+      <h3>閘門關起來不用慌</h3>
+      <p>媽媽：手機當場加值再刷。爸爸：到出口旁的<b>精算機</b>投現金補足，或找站務員。</p>
+    </div>
+    <div class="flow-step">
+      <div class="no">4</div>
+      <div class="where">購物</div>
+      <h3>看到 IC 共通標誌就能刷</h3>
+      <p>便利商店、藥妝、販賣機、置物櫃都能用。告訴店員用交通 IC 卡，<b>一筆只能用一張卡付</b>。</p>
+    </div>
+  </div>
+
+  <h2 class="section-title">本趟哪些交通用 Suica、哪些不用</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>日期</th><th>交通</th><th>用 Suica？</th></tr></thead>
+    <tbody>
+      <tr><td>Day 1／Day 6</td><td>Skyliner 成田 ⇄ 京成上野</td><td>❌ 已買電子票，用票上車</td></tr>
+      <tr><td>Day 2–5</td><td>東京地鐵（銀座線、日比谷線等）、都營、JR 山手線</td><td>✅ 全部可刷</td></tr>
+      <tr><td>每天</td><td>便利商店、販賣機、車站置物櫃</td><td>✅ 小額付款很方便</td></tr>
+      <tr><td>—</td><td>新幹線、特急</td><td>本趟沒排；Suica 只能付基本車資，特急券要另買</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note tip"><b>💡 要儲多少：</b>市區地鐵單程約 ¥180–260，Day 2–5 每人每天約 4–6 段，約 ¥1,000／天，四天約 ¥4,000，再加便利商店小額付款。<span style="color:var(--muted)">[推論：依本行程路線估算]</span> 爸爸先買 ¥3,000，Day 3 看餘額再用現金加值一次。</div>
+
+  <h2 class="section-title">出發前確認清單</h2>
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>👩 媽媽（出發前一週）</h3>
+      <ul class="list">
+        <li>錢包 App 新增 Suica，儲 ¥5,000</li>
+        <li>確認台灣信用卡能透過 Apple Pay 加值；不行就到日本用現金在售票機或便利商店加值 <span style="color:var(--muted)">[各發卡銀行規定不同]</span></li>
+        <li>確認已設為快速交通卡</li>
+        <li>問發卡銀行海外交易手續費（加值也算海外刷卡）</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>👨 爸爸（到日本後）</h3>
+      <ul class="list">
+        <li>身上留 <b>¥5,000 以上日圓現金</b>，買卡和加值都只收現金</li>
+        <li>Day 1 下午在 JR 上野站買一般 Suica ¥3,000</li>
+        <li>卡片放錢包外層，別夾在手機殼裡</li>
+        <li>回國前<b>不退卡</b>，留著下次用</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note"><b>資料來源：</b>樂吃購！日本〈Android 手機可以用西瓜卡嗎？2026 最新對應與替代方案〉、〈西瓜卡 Suica 完整指南 2026〉（皆 2026/10/02）。三星海外版支援時程以官方公告為準；售票地點與票價以現場為準。</div>
+</main>
+
 <!-- ============ 市集攻略 ============ -->
 <main class="page" id="page-market">
   <div class="market-hero">
@@ -2310,7 +2445,7 @@ td.new{font-weight:600;}
 
 <script>
 (function(){
-  var pages=["home","day1","day2","day3","day4","day5","day6","shopping","kids","taxfree","market","map"];
+  var pages=["home","day1","day2","day3","day4","day5","day6","shopping","kids","taxfree","suica","market","map"];
   var tabs=document.querySelectorAll(".tab");
   function show(id,push){
     if(pages.indexOf(id)<0)id="home";
