@@ -36,13 +36,13 @@
     <Placemark><name>②  入住 &amp;Here TOKYO UENO（14:00）</name><styleUrl>#hotel</styleUrl>
       <description>13:45 抵京成上野，步行 3 分鐘。確認嬰兒床已備妥。</description>
       <Point><coordinates>139.7745,35.7118,0</coordinates></Point></Placemark>
-    <Placemark><name>③  業務超市 上野（15:00-16:30）</name><styleUrl>#shop</styleUrl>
-      <description>副食品、牛奶、水果、隔日早餐採購。飯店旁，路口另有全家、LAWSON。</description>
+    <Placemark><name>③ ⚡ 寶可夢中心 TOKYO DX（爸爸 14:45-15:45 姪兒視訊採購）</name><styleUrl>#shop</styleUrl>
+      <description>日本橋髙島屋 S.C. 東館 5F，10:30-21:00。上野搭銀座線到日本橋約 10 分鐘、B2 出口直通。台灣時間 13:45 開始視訊；備案為晚餐後 19:15。</description>
+      <Point><coordinates>139.7737,35.6806,0</coordinates></Point></Placemark>
+    <Placemark><name>④  業務超市 上野（16:15-17:15）</name><styleUrl>#shop</styleUrl>
+      <description>副食品、牛奶、水果、隔日早餐採購。飯店旁，路口另有全家、LAWSON。爸爸回上野後全家在此會合。</description>
       <Point><coordinates>139.7758,35.7100,0</coordinates></Point></Placemark>
-    <Placemark><name>④  上野恩賜公園（17:00 輕散步）</name><styleUrl>#sight</styleUrl>
-      <description>視體力而定，不排正式景點，讓孩子適應環境。</description>
-      <Point><coordinates>139.7743,35.7156,0</coordinates></Point></Placemark>
-    <Placemark><name>⑤ 🍽️ 黑船亭（18:00 晚餐）</name><styleUrl>#food</styleUrl>
+    <Placemark><name>⑤ 🍽️ 黑船亭（17:30 晚餐）</name><styleUrl>#food</styleUrl>
       <description>上野洋食老舖，招牌特製牛肉燴飯、高麗菜捲質地軟嫩適合分食。約 4.2★。建議 17:30 開店即入座。</description>
       <Point><coordinates>139.7752,35.7106,0</coordinates></Point></Placemark>
   </Folder>
